@@ -1,0 +1,179 @@
+/* ==========================================================================
+   CHINAGRAPH // 2026
+
+   File:
+   reset.css
+
+   Description:
+   Modern CSS reset providing a consistent foundation across browsers.
+   Includes accessibility, typography and responsive best practices.
+
+   Author:
+   Rishi Khosla
+
+   ========================================================================== */
+
+/* ==========================================================================
+   Box sizing
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Document
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+
+    color: var(--colour-text);
+    background-color: var(--colour-background);
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal);
+}
+
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+dl,
+dd {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Media
+   ========================================================================== */
+
+img,
+picture,
+svg,
+video,
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+textarea:not([rows]) {
+    min-height: 8rem;
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ==========================================================================
+   Focus Styles
+   ========================================================================== */
+
+:focus-visible {
+    outline: 3px solid var(--colour-primary);
+    outline-offset: 3px;
+}
+
+/* ==========================================================================
+   Selection
+   ========================================================================== */
+
+::selection {
+    color: var(--colour-surface);
+    background: var(--colour-primary);
+}
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}
