@@ -1,0 +1,178 @@
+/* ==========================================================================
+   CHINAGRAPH // 2026
+
+   File:
+   layout.css
+
+   Description:
+   Global layout system including containers, sections, grids and utility
+   layout classes.
+
+   Author:
+   Rishi Khosla
+   ========================================================================== */
+
+/* ==========================================================================
+   Main Layout
+   ========================================================================== */
+
+main {
+    display: block;
+}
+
+/* ==========================================================================
+   Container
+   ========================================================================== */
+
+.container {
+    width: min(100% - (2 * var(--container-padding)), var(--container-width));
+    margin-inline: auto;
+}
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+.section {
+    padding-block: var(--section-spacing);
+}
+
+.section--small {
+    padding-block: var(--space-16);
+}
+
+.section--large {
+    padding-block: calc(var(--section-spacing) * 1.5);
+}
+
+/* ==========================================================================
+   Layout Flow
+   ========================================================================== */
+
+.flow>*+* {
+    margin-top: var(--space-6);
+}
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+.grid {
+    display: grid;
+    gap: var(--space-8);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* ==========================================================================
+   Flex Utilities
+   ========================================================================== */
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-centre {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-centre {
+    justify-content: center;
+}
+
+.gap-sm {
+    gap: var(--space-4);
+}
+
+.gap-md {
+    gap: var(--space-6);
+}
+
+.gap-lg {
+    gap: var(--space-8);
+}
+
+/* ==========================================================================
+   Width Utilities
+   ========================================================================== */
+
+.max-width-text {
+    max-width: 65ch;
+}
+
+.max-width-content {
+    max-width: 80rem;
+}
+
+/* ==========================================================================
+   Screen Reader Utility
+   ========================================================================== */
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    margin: -1px;
+    padding: 0;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    border: 0;
+
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-block: var(--space-20);
+    }
+}
+
+@media (max-width: 767px) {
+
+    .container {
+        width: min(100% - var(--space-6), var(--container-width));
+    }
+
+    .section {
+        padding-block: var(--space-16);
+    }
+}
