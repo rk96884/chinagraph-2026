@@ -20,6 +20,7 @@
 .hero__content {
     position: relative;
     z-index: 2;
+    max-width: 42rem;
 }
 
 .hero__eyebrow {
@@ -74,12 +75,18 @@
     font-size: .9rem;
 }
 
+.hero__stats li {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
 .hero__visual {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
+    min-height: clamp(320px, 50vw, 550px);
 }
 
 .hero__year {
