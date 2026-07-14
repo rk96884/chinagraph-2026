@@ -1,0 +1,205 @@
+/* ==========================================================================
+   CHINAGRAPH // 2026
+
+   File:
+   navigation.css
+
+   Description:
+   Responsive site navigation with sticky header.
+
+   Author:
+   Rishi Khosla
+   ========================================================================== */
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    background: rgb(250 250 248 / 0.85);
+
+    border-bottom: 1px solid var(--colour-border);
+
+    transition:
+        background-color var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 5rem;
+}
+
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+
+.site-logo {
+    display: flex;
+    flex-direction: column;
+
+    text-decoration: none;
+}
+
+.site-logo__title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+
+    letter-spacing: 0.15em;
+
+    color: var(--colour-text);
+
+    transition: color var(--transition-fast);
+}
+
+.site-logo__tagline {
+    margin-top: var(--space-1);
+
+    font-size: var(--font-size-xs);
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--colour-text-muted);
+}
+
+/* ==========================================================================
+   Navigation List
+   ========================================================================== */
+
+.nav-list {
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-8);
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list a {
+    position: relative;
+
+    font-weight: var(--font-weight-medium);
+
+    color: var(--colour-text);
+
+    transition: color var(--transition-fast);
+}
+
+/* Animated underline */
+
+.nav-list a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -0.35rem;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--colour-primary);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform var(--transition-normal);
+}
+
+.nav-list a:hover::after,
+.nav-list a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+    color: var(--colour-primary);
+}
+
+/* ==========================================================================
+   Theme Button
+   ========================================================================== */
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.75rem;
+    height: 2.75rem;
+
+    border: 1px solid var(--colour-border);
+    border-radius: 50%;
+
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    background: var(--colour-surface);
+    transform: rotate(12deg);
+}
+
+/* ==========================================================================
+   Mobile Toggle
+   ========================================================================== */
+
+.nav-toggle {
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 0.35rem;
+}
+
+.nav-toggle__bar {
+    width: 1.5rem;
+    height: 2px;
+
+    background: var(--colour-text);
+
+    border-radius: var(--radius-pill);
+
+    transition: all var(--transition-normal);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .site-logo__tagline {
+        display: none;
+    }
+}

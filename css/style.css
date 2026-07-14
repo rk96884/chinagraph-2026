@@ -1,10 +1,73 @@
+/* ==========================================================================
+   CHINAGRAPH // 2026
+
+   File:
+   style.css
+
+   Description:
+   Main stylesheet.
+   Imports all design tokens, base styles, layout utilities and components.
+
+   Author:
+   Rishi Khosla
+   ========================================================================== */
+
+/* ==========================================================================
+   Design Tokens
+   ========================================================================== */
+
 @import url("variables.css");
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
 @import url("reset.css");
 @import url("typography.css");
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
 @import url("layout.css");
-@import url("navigation.css");
-@import url("hero.css");
-@import url("buttons.css");
-@import url("cards.css");
-@import url("animations.css");
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+@import url("components/navigation.css");
+@import url("components/hero.css");
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/footer.css");
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
 @import url("utilities.css");
+
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
+
+html {
+    color-scheme: light dark;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    overflow: clip;
+}
+
+section {
+    position: relative;
+}
+
+::selection {
+    background-color: var(--colour-primary);
+    color: var(--colour-surface);
+}
