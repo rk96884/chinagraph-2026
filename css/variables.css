@@ -1,0 +1,130 @@
+/* ==========================================================================
+   CHINAGRAPH // 2026
+   Design Tokens
+   ========================================================================== */
+
+:root {
+    /* ==========================================================
+       Colour Palette - Light Theme
+       ========================================================== */
+
+    --colour-background: #fafaf8;
+    --colour-surface: #ffffff;
+
+    --colour-text: #1a1a1a;
+    --colour-text-muted: #666666;
+
+    --colour-primary: #2563eb;
+    --colour-primary-hover: #1d4ed8;
+
+    --colour-border: #e5e7eb;
+
+    --colour-success: #15803d;
+    --colour-warning: #d97706;
+    --colour-error: #dc2626;
+
+    /* ==========================================================
+       Typography
+       ========================================================== */
+
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: clamp(2.5rem, 6vw, 4rem);
+    --font-size-hero: clamp(3.5rem, 8vw, 6rem);
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.6;
+    --line-height-loose: 1.8;
+
+    /* ==========================================================
+       Spacing (8-point system)
+       ========================================================== */
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    /* ==========================================================
+       Layout
+       ========================================================== */
+
+    --container-width: 1200px;
+    --container-padding: 1.5rem;
+    --section-spacing: 6rem;
+
+    /* ==========================================================
+       Border Radius
+       ========================================================== */
+
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1.25rem;
+    --radius-pill: 999px;
+
+    /* ==========================================================
+       Shadows
+       ========================================================== */
+
+    --shadow-sm: 0 2px 4px rgb(0 0 0 / 0.08);
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 0.10);
+    --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.14);
+
+    /* ==========================================================
+       Animation
+       ========================================================== */
+
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 250ms ease-in-out;
+    --transition-slow: 400ms ease-in-out;
+
+    /* ==========================================================
+       Layering
+       ========================================================== */
+
+    --z-header: 100;
+    --z-overlay: 500;
+    --z-modal: 1000;
+}
+
+/* ==========================================================================
+   Dark Theme
+   ========================================================================== */
+
+[data-theme="dark"] {
+
+    --colour-background: #121212;
+    --colour-surface: #1d1d1d;
+
+    --colour-text: #f5f5f5;
+    --colour-text-muted: #b5b5b5;
+
+    --colour-primary: #60a5fa;
+    --colour-primary-hover: #93c5fd;
+
+    --colour-border: #333333;
+
+    --shadow-sm: 0 2px 4px rgb(0 0 0 / 0.35);
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 0.45);
+    --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.55);
+}
