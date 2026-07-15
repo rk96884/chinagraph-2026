@@ -64,8 +64,6 @@
 ========================================================== */
 
 .journey {
-    max-width: 70rem;
-    margin-inline: auto;
     margin-top: var(--space-10);
 }
 
