@@ -39,6 +39,7 @@
 @import url("components/hero.css");
 @import url("components/buttons.css");
 @import url("components/cards.css");
+@import url("components/featured-project.css");
 @import url("components/footer.css");
 
 /* ==========================================================================
@@ -52,22 +53,22 @@
    ========================================================================== */
 
 html {
-    color-scheme: light dark;
+   color-scheme: light dark;
 }
 
 body {
-    overflow-x: hidden;
+   overflow-x: hidden;
 }
 
 main {
-    overflow: clip;
+   overflow: clip;
 }
 
 section {
-    position: relative;
+   position: relative;
 }
 
 ::selection {
-    background-color: var(--colour-primary);
-    color: var(--colour-surface);
+   background-color: var(--colour-primary);
+   color: var(--colour-surface);
 }
