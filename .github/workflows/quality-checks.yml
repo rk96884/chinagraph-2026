@@ -1,0 +1,48 @@
+name: Quality checks
+
+on:
+  push:
+    branches:
+      - develop
+      - "feature/**"
+
+  pull_request:
+    branches:
+      - develop
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify required files
+        shell: bash
+        run: |
+          test -f index.html
+          test -f css/style.css
+          test -f js/theme.js
+          test -d pages
+          echo "Required project files found."
+
+      - name: Check for unresolved merge markers
+        shell: bash
+        run: |
+          if grep -R \
+            --exclude-dir=.git \
+            --exclude="*.png" \
+            --exclude="*.jpg" \
+            --exclude="*.jpeg" \
+            --exclude="*.webp" \
+            -E "^(<<<<<<<|=======|>>>>>>>)" .; then
+              echo "Unresolved merge markers found."
+              exit 1
+          fi
+
+          echo "No unresolved merge markers found."
