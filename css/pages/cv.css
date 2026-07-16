@@ -188,9 +188,7 @@
     border-top: 1px solid var(--colour-border);
 }
 
-.cv-role:last-child {
-    border-bottom: 1px solid var(--colour-border);
-}
+
 
 .cv-role__dates {
     margin-bottom: var(--space-2);
