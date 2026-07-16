@@ -1,0 +1,439 @@
+/* ==========================================================================
+   CHINAGRAPH // 2026
+
+   File:
+   chinagraph-branding.css
+
+   Description:
+   Reusable Chinagraph branding elements, authentic marks and reveal
+   animations.
+
+   Author:
+   Rishi Khosla
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Reusable Crop Marks
+   ========================================================================== */
+
+.cg-crop {
+    position: absolute;
+
+    width: 3.9rem;
+    height: 3.9rem;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0.65;
+
+    pointer-events: none;
+    user-select: none;
+
+    clip-path: inset(0 100% 100% 0);
+
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+
+/* --------------------------------------------------------------------------
+   Navigation logo crop mark
+   -------------------------------------------------------------------------- */
+
+.cg-crop--logo {
+    top: -1.35rem;
+    left: -1.35rem;
+
+    background-image:
+        url("/images/chinagraph-library/crop-marks/crop-top-left-01-soft.webp");
+
+    transform: rotate(-7deg);
+
+    animation:
+        cg-crop-draw 700ms cubic-bezier(.22, 1, .36, 1) 0.35s forwards;
+}
+
+.site-logo:hover .cg-crop--logo {
+    opacity: 0.85;
+
+    transform:
+        rotate(-10deg) translate(-1px, -1px);
+}
+
+
+/* --------------------------------------------------------------------------
+   Footer logo crop mark
+   -------------------------------------------------------------------------- */
+
+.cg-crop--footer {
+    right: -1.6rem;
+    bottom: -1rem;
+
+    background-image:
+        url("/images/chinagraph-library/crop-marks/crop-bottom-right-01-soft.webp");
+
+    opacity: 0.5;
+
+    transform: rotate(4deg);
+
+    animation:
+        cg-crop-draw 700ms cubic-bezier(.22, 1, .36, 1) 0.45s forwards;
+}
+
+.footer-logo:hover .cg-crop--footer,
+.site-footer__brand:hover .cg-crop--footer {
+    opacity: 0.8;
+
+    transform:
+        rotate(7deg) translate(1px, 1px);
+}
+
+
+/* --------------------------------------------------------------------------
+   Crop mark animation
+   -------------------------------------------------------------------------- */
+
+@keyframes cg-crop-draw {
+    to {
+        clip-path: inset(0);
+    }
+}
+
+
+/* ==========================================================================
+   Logo Positioning Context
+   ========================================================================== */
+
+.site-logo,
+.footer-logo,
+.site-footer__brand {
+    position: relative;
+    overflow: visible;
+}
+
+.site-logo {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+
+/* ==========================================================================
+   Generic Chinagraph Mask Mark
+   ========================================================================== */
+
+.cg-mark {
+    --cg-colour: var(--colour-primary);
+    --cg-duration: 900ms;
+    --cg-delay: 0ms;
+
+    display: block;
+
+    background-color: var(--cg-colour);
+
+    opacity: 0.78;
+
+    -webkit-mask-image: var(--cg-image);
+    mask-image: var(--cg-image);
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-position: left center;
+    mask-position: left center;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   Generic draw-on reveal
+   -------------------------------------------------------------------------- */
+
+.cg-mark--reveal {
+    clip-path: inset(0 100% 0 0);
+}
+
+.cg-mark--reveal.is-visible,
+.is-visible .cg-mark--reveal {
+    animation:
+        cg-reveal var(--cg-duration) cubic-bezier(.22, 1, .36, 1) var(--cg-delay) forwards;
+}
+
+@keyframes cg-reveal {
+    to {
+        clip-path: inset(0);
+    }
+}
+
+
+/* ==========================================================================
+   Reusable Mask Assets
+   ========================================================================== */
+
+.cg-underline-thick {
+    --cg-image:
+        url("/images/chinagraph-library/underlines/underline-thick-01-medium.webp");
+}
+
+.cg-underline-soft {
+    --cg-image:
+        url("/images/chinagraph-library/underlines/underline-thin-01-soft.webp");
+
+    width: min(18rem, 80vw);
+    aspect-ratio: 3.74 / 1;
+}
+
+.cg-highlight-broad {
+    --cg-image:
+        url("/images/chinagraph-library/underlines/underline-thick-02-soft.webp");
+
+    width: min(22rem, 90vw);
+    aspect-ratio: 1.93 / 1;
+
+    opacity: 0.28;
+}
+
+.cg-frame-cv {
+    --cg-image:
+        url("/images/chinagraph-library/frames/square-frame-01-medium.webp");
+
+    width: 100%;
+    aspect-ratio: 1.4 / 1;
+}
+
+.cg-arrow-forward {
+    --cg-image:
+        url("/images/chinagraph-library/arrows/arrow-right-01-medium.webp");
+
+    width: 5rem;
+    aspect-ratio: 3 / 1;
+}
+
+
+/* ==========================================================================
+   Animated Heading Marks
+   ========================================================================== */
+
+.section-title--chinagraph {
+    margin: 0;
+}
+
+.section-title__marked-text {
+    display: inline;
+
+    padding-inline: 0.08em;
+
+    background-image: var(--chinagraph-underline);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0% 100%;
+
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.section-title--chinagraph.is-visible .section-title__marked-text {
+    animation:
+        chinagraph-heading-reveal 900ms cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+@keyframes chinagraph-heading-reveal {
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+
+/* ==========================================================================
+   Theme Adjustments
+   ========================================================================== */
+
+html[data-theme="dark"] .cg-mark {
+    opacity: 0.9;
+}
+
+html[data-theme="dark"] .cg-crop {
+    opacity: 0.75;
+}
+
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cg-crop,
+    .cg-mark--reveal {
+        clip-path: inset(0);
+
+        animation: none !important;
+    }
+
+    .section-title__marked-text {
+        background-size: 100% 100%;
+
+        animation: none !important;
+    }
+}
+
+/* ==========================================================================
+   Hero Title Frame
+   ========================================================================== */
+
+.hero__title--framed {
+
+    position: relative;
+
+    display: inline-block;
+
+    isolation: isolate;
+
+}
+
+.cg-frame {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: .42;
+
+    clip-path: inset(0 100% 100% 0);
+
+}
+
+
+/* --------------------------------------------------------------------------
+   Hero Frame
+   -------------------------------------------------------------------------- */
+
+.cg-frame--hero {
+
+    top: -1.2rem;
+    left: -1.8rem;
+
+    width: calc(100% + 3.6rem);
+    height: calc(100% + 2.4rem);
+
+    background-image:
+        url("/images/chinagraph-library/frames/square-frame-01-medium.webp");
+
+    transform: rotate(-1.5deg);
+
+    animation:
+        cg-frame-draw 900ms cubic-bezier(.22, 1, .36, 1) .45s forwards;
+
+}
+
+.hero__title:hover .cg-frame--hero {
+
+    opacity: .6;
+
+    transform:
+        rotate(-2deg) scale(1.01);
+
+}
+
+
+/* --------------------------------------------------------------------------
+   Animation
+   -------------------------------------------------------------------------- */
+
+@keyframes cg-frame-draw {
+
+    to {
+
+        clip-path: inset(0);
+
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cg-frame {
+
+        clip-path: inset(0);
+
+        animation: none;
+
+    }
+
+}
+
+/* ==========================================================================
+   CV hero signature reveal
+   ========================================================================== */
+
+.cv-hero__name {
+    overflow: visible;
+}
+
+.cv-hero__name-image {
+    display: block;
+
+    width: min(100%, 34rem);
+    height: auto;
+
+    opacity: 0;
+
+    clip-path: inset(0 100% 0 0);
+
+    transform:
+        translateX(-0.5rem) rotate(-1deg);
+
+    animation:
+        cv-signature-reveal 1.1s cubic-bezier(.22, 1, .36, 1) 0.25s forwards;
+}
+
+@keyframes cv-signature-reveal {
+    0% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+
+        transform:
+            translateX(-0.5rem) rotate(-1deg);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        clip-path: inset(0);
+
+        transform:
+            translateX(0) rotate(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cv-hero__name-image {
+        opacity: 1;
+        clip-path: inset(0);
+        transform: none;
+        animation: none;
+    }
+}

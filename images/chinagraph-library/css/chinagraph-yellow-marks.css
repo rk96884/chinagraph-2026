@@ -1,0 +1,33 @@
+/* CHINAGRAPH Yellow Mark Library v2 */
+:root {
+    --cg-yellow: #f7c519;
+    --cg-yellow-dark: #ffd83d;
+}
+
+.cg-image-mark {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+}
+
+.cg-reveal {
+    clip-path: inset(0 100% 0 0);
+}
+
+.cg-reveal.is-visible,
+.is-visible .cg-reveal {
+    animation: cg-draw-on 900ms cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+@keyframes cg-draw-on {
+    to { clip-path: inset(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cg-reveal {
+        clip-path: inset(0);
+        animation: none !important;
+    }
+}

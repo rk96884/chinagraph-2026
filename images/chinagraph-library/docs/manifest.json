@@ -1,0 +1,444 @@
+{
+  "assets": [
+    {
+      "name": "square-frame-01",
+      "category": "frames",
+      "width": 260,
+      "height": 191,
+      "variants": {
+        "soft": "frames/square-frame-01-soft.webp",
+        "medium": "frames/square-frame-01-medium.webp",
+        "bold": "frames/square-frame-01-bold.webp"
+      }
+    },
+    {
+      "name": "square-frame-02",
+      "category": "frames",
+      "width": 260,
+      "height": 198,
+      "variants": {
+        "soft": "frames/square-frame-02-soft.webp",
+        "medium": "frames/square-frame-02-medium.webp",
+        "bold": "frames/square-frame-02-bold.webp"
+      }
+    },
+    {
+      "name": "square-frame-03",
+      "category": "frames",
+      "width": 235,
+      "height": 184,
+      "variants": {
+        "soft": "frames/square-frame-03-soft.webp",
+        "medium": "frames/square-frame-03-medium.webp",
+        "bold": "frames/square-frame-03-bold.webp"
+      }
+    },
+    {
+      "name": "circle-01",
+      "category": "circles",
+      "width": 255,
+      "height": 199,
+      "variants": {
+        "soft": "circles/circle-01-soft.webp",
+        "medium": "circles/circle-01-medium.webp",
+        "bold": "circles/circle-01-bold.webp"
+      }
+    },
+    {
+      "name": "arrow-right-01",
+      "category": "arrows",
+      "width": 391,
+      "height": 175,
+      "variants": {
+        "soft": "arrows/arrow-right-01-soft.webp",
+        "medium": "arrows/arrow-right-01-medium.webp",
+        "bold": "arrows/arrow-right-01-bold.webp"
+      }
+    },
+    {
+      "name": "underline-thick-01",
+      "category": "underlines",
+      "width": 379,
+      "height": 72,
+      "variants": {
+        "soft": "underlines/underline-thick-01-soft.webp",
+        "medium": "underlines/underline-thick-01-medium.webp",
+        "bold": "underlines/underline-thick-01-bold.webp"
+      }
+    },
+    {
+      "name": "underline-thick-02",
+      "category": "underlines",
+      "width": 390,
+      "height": 74,
+      "variants": {
+        "soft": "underlines/underline-thick-02-soft.webp",
+        "medium": "underlines/underline-thick-02-medium.webp",
+        "bold": "underlines/underline-thick-02-bold.webp"
+      }
+    },
+    {
+      "name": "underline-thin-01",
+      "category": "underlines",
+      "width": 355,
+      "height": 80,
+      "variants": {
+        "soft": "underlines/underline-thin-01-soft.webp",
+        "medium": "underlines/underline-thin-01-medium.webp",
+        "bold": "underlines/underline-thin-01-bold.webp"
+      }
+    },
+    {
+      "name": "underline-thin-02",
+      "category": "underlines",
+      "width": 390,
+      "height": 85,
+      "variants": {
+        "soft": "underlines/underline-thin-02-soft.webp",
+        "medium": "underlines/underline-thin-02-medium.webp",
+        "bold": "underlines/underline-thin-02-bold.webp"
+      }
+    },
+    {
+      "name": "tick-medium-01",
+      "category": "ticks",
+      "width": 230,
+      "height": 174,
+      "variants": {
+        "soft": "ticks/tick-medium-01-soft.webp",
+        "medium": "ticks/tick-medium-01-medium.webp",
+        "bold": "ticks/tick-medium-01-bold.webp"
+      }
+    },
+    {
+      "name": "tick-large-01",
+      "category": "ticks",
+      "width": 204,
+      "height": 212,
+      "variants": {
+        "soft": "ticks/tick-large-01-soft.webp",
+        "medium": "ticks/tick-large-01-medium.webp",
+        "bold": "ticks/tick-large-01-bold.webp"
+      }
+    },
+    {
+      "name": "cross-medium-01",
+      "category": "crosses",
+      "width": 185,
+      "height": 165,
+      "variants": {
+        "soft": "crosses/cross-medium-01-soft.webp",
+        "medium": "crosses/cross-medium-01-medium.webp",
+        "bold": "crosses/cross-medium-01-bold.webp"
+      }
+    },
+    {
+      "name": "cross-medium-02",
+      "category": "crosses",
+      "width": 180,
+      "height": 164,
+      "variants": {
+        "soft": "crosses/cross-medium-02-soft.webp",
+        "medium": "crosses/cross-medium-02-medium.webp",
+        "bold": "crosses/cross-medium-02-bold.webp"
+      }
+    },
+    {
+      "name": "cross-medium-03",
+      "category": "crosses",
+      "width": 186,
+      "height": 159,
+      "variants": {
+        "soft": "crosses/cross-medium-03-soft.webp",
+        "medium": "crosses/cross-medium-03-medium.webp",
+        "bold": "crosses/cross-medium-03-bold.webp"
+      }
+    },
+    {
+      "name": "cross-large-01",
+      "category": "crosses",
+      "width": 210,
+      "height": 199,
+      "variants": {
+        "soft": "crosses/cross-large-01-soft.webp",
+        "medium": "crosses/cross-large-01-medium.webp",
+        "bold": "crosses/cross-large-01-bold.webp"
+      }
+    },
+    {
+      "name": "cross-large-02",
+      "category": "crosses",
+      "width": 220,
+      "height": 199,
+      "variants": {
+        "soft": "crosses/cross-large-02-soft.webp",
+        "medium": "crosses/cross-large-02-medium.webp",
+        "bold": "crosses/cross-large-02-bold.webp"
+      }
+    },
+    {
+      "name": "crop-top-left-01",
+      "category": "crop-marks",
+      "width": 114,
+      "height": 109,
+      "variants": {
+        "soft": "crop-marks/crop-top-left-01-soft.webp",
+        "medium": "crop-marks/crop-top-left-01-medium.webp",
+        "bold": "crop-marks/crop-top-left-01-bold.webp"
+      }
+    },
+    {
+      "name": "crop-top-right-01",
+      "category": "crop-marks",
+      "width": 112,
+      "height": 107,
+      "variants": {
+        "soft": "crop-marks/crop-top-right-01-soft.webp",
+        "medium": "crop-marks/crop-top-right-01-medium.webp",
+        "bold": "crop-marks/crop-top-right-01-bold.webp"
+      }
+    },
+    {
+      "name": "crop-top-left-02",
+      "category": "crop-marks",
+      "width": 121,
+      "height": 117,
+      "variants": {
+        "soft": "crop-marks/crop-top-left-02-soft.webp",
+        "medium": "crop-marks/crop-top-left-02-medium.webp",
+        "bold": "crop-marks/crop-top-left-02-bold.webp"
+      }
+    },
+    {
+      "name": "crop-top-right-02",
+      "category": "crop-marks",
+      "width": 165,
+      "height": 104,
+      "variants": {
+        "soft": "crop-marks/crop-top-right-02-soft.webp",
+        "medium": "crop-marks/crop-top-right-02-medium.webp",
+        "bold": "crop-marks/crop-top-right-02-bold.webp"
+      }
+    },
+    {
+      "name": "crop-bottom-left-01",
+      "category": "crop-marks",
+      "width": 125,
+      "height": 132,
+      "variants": {
+        "soft": "crop-marks/crop-bottom-left-01-soft.webp",
+        "medium": "crop-marks/crop-bottom-left-01-medium.webp",
+        "bold": "crop-marks/crop-bottom-left-01-bold.webp"
+      }
+    },
+    {
+      "name": "crop-bottom-right-01",
+      "category": "crop-marks",
+      "width": 152,
+      "height": 131,
+      "variants": {
+        "soft": "crop-marks/crop-bottom-right-01-soft.webp",
+        "medium": "crop-marks/crop-bottom-right-01-medium.webp",
+        "bold": "crop-marks/crop-bottom-right-01-bold.webp"
+      }
+    },
+    {
+      "name": "crop-bottom-left-02",
+      "category": "crop-marks",
+      "width": 152,
+      "height": 130,
+      "variants": {
+        "soft": "crop-marks/crop-bottom-left-02-soft.webp",
+        "medium": "crop-marks/crop-bottom-left-02-medium.webp",
+        "bold": "crop-marks/crop-bottom-left-02-bold.webp"
+      }
+    },
+    {
+      "name": "crop-bottom-right-02",
+      "category": "crop-marks",
+      "width": 174,
+      "height": 132,
+      "variants": {
+        "soft": "crop-marks/crop-bottom-right-02-soft.webp",
+        "medium": "crop-marks/crop-bottom-right-02-medium.webp",
+        "bold": "crop-marks/crop-bottom-right-02-bold.webp"
+      }
+    },
+    {
+      "name": "plus-01",
+      "category": "pluses",
+      "width": 165,
+      "height": 135,
+      "variants": {
+        "soft": "pluses/plus-01-soft.webp",
+        "medium": "pluses/plus-01-medium.webp",
+        "bold": "pluses/plus-01-bold.webp"
+      }
+    },
+    {
+      "name": "plus-02",
+      "category": "pluses",
+      "width": 151,
+      "height": 109,
+      "variants": {
+        "soft": "pluses/plus-02-soft.webp",
+        "medium": "pluses/plus-02-medium.webp",
+        "bold": "pluses/plus-02-bold.webp"
+      }
+    },
+    {
+      "name": "plus-03",
+      "category": "pluses",
+      "width": 165,
+      "height": 148,
+      "variants": {
+        "soft": "pluses/plus-03-soft.webp",
+        "medium": "pluses/plus-03-medium.webp",
+        "bold": "pluses/plus-03-bold.webp"
+      }
+    },
+    {
+      "name": "plus-04",
+      "category": "pluses",
+      "width": 150,
+      "height": 149,
+      "variants": {
+        "soft": "pluses/plus-04-soft.webp",
+        "medium": "pluses/plus-04-medium.webp",
+        "bold": "pluses/plus-04-bold.webp"
+      }
+    },
+    {
+      "name": "rishi-khosla-signature-01",
+      "category": "signatures",
+      "width": 424,
+      "height": 161,
+      "variants": {
+        "soft": "signatures/rishi-khosla-signature-01-soft.webp",
+        "medium": "signatures/rishi-khosla-signature-01-medium.webp",
+        "bold": "signatures/rishi-khosla-signature-01-bold.webp"
+      }
+    },
+    {
+      "name": "rishi-khosla-signature-02",
+      "category": "signatures",
+      "width": 492,
+      "height": 199,
+      "variants": {
+        "soft": "signatures/rishi-khosla-signature-02-soft.webp",
+        "medium": "signatures/rishi-khosla-signature-02-medium.webp",
+        "bold": "signatures/rishi-khosla-signature-02-bold.webp"
+      }
+    },
+    {
+      "name": "number-circle-01",
+      "category": "numbers",
+      "width": 179,
+      "height": 157,
+      "variants": {
+        "soft": "numbers/number-circle-01-soft.webp",
+        "medium": "numbers/number-circle-01-medium.webp",
+        "bold": "numbers/number-circle-01-bold.webp"
+      }
+    },
+    {
+      "name": "number-circle-02",
+      "category": "numbers",
+      "width": 200,
+      "height": 180,
+      "variants": {
+        "soft": "numbers/number-circle-02-soft.webp",
+        "medium": "numbers/number-circle-02-medium.webp",
+        "bold": "numbers/number-circle-02-bold.webp"
+      }
+    },
+    {
+      "name": "number-circle-03",
+      "category": "numbers",
+      "width": 200,
+      "height": 180,
+      "variants": {
+        "soft": "numbers/number-circle-03-soft.webp",
+        "medium": "numbers/number-circle-03-medium.webp",
+        "bold": "numbers/number-circle-03-bold.webp"
+      }
+    },
+    {
+      "name": "number-circle-04",
+      "category": "numbers",
+      "width": 200,
+      "height": 157,
+      "variants": {
+        "soft": "numbers/number-circle-04-soft.webp",
+        "medium": "numbers/number-circle-04-medium.webp",
+        "bold": "numbers/number-circle-04-bold.webp"
+      }
+    },
+    {
+      "name": "number-circle-05",
+      "category": "numbers",
+      "width": 210,
+      "height": 157,
+      "variants": {
+        "soft": "numbers/number-circle-05-soft.webp",
+        "medium": "numbers/number-circle-05-medium.webp",
+        "bold": "numbers/number-circle-05-bold.webp"
+      }
+    },
+    {
+      "name": "number-circle-06",
+      "category": "numbers",
+      "width": 187,
+      "height": 131,
+      "variants": {
+        "soft": "numbers/number-circle-06-soft.webp",
+        "medium": "numbers/number-circle-06-medium.webp",
+        "bold": "numbers/number-circle-06-bold.webp"
+      }
+    },
+    {
+      "name": "number-circle-07",
+      "category": "numbers",
+      "width": 205,
+      "height": 146,
+      "variants": {
+        "soft": "numbers/number-circle-07-soft.webp",
+        "medium": "numbers/number-circle-07-medium.webp",
+        "bold": "numbers/number-circle-07-bold.webp"
+      }
+    },
+    {
+      "name": "number-circle-08",
+      "category": "numbers",
+      "width": 210,
+      "height": 180,
+      "variants": {
+        "soft": "numbers/number-circle-08-soft.webp",
+        "medium": "numbers/number-circle-08-medium.webp",
+        "bold": "numbers/number-circle-08-bold.webp"
+      }
+    },
+    {
+      "name": "number-circle-09",
+      "category": "numbers",
+      "width": 225,
+      "height": 180,
+      "variants": {
+        "soft": "numbers/number-circle-09-soft.webp",
+        "medium": "numbers/number-circle-09-medium.webp",
+        "bold": "numbers/number-circle-09-bold.webp"
+      }
+    },
+    {
+      "name": "number-circle-10",
+      "category": "numbers",
+      "width": 198,
+      "height": 168,
+      "variants": {
+        "soft": "numbers/number-circle-10-soft.webp",
+        "medium": "numbers/number-circle-10-medium.webp",
+        "bold": "numbers/number-circle-10-bold.webp"
+      }
+    }
+  ]
+}
