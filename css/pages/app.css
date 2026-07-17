@@ -21,6 +21,14 @@
         clamp(4rem, 7vw, 6rem) clamp(6rem, 9vw, 8rem);
 }
 
+.app-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: var(--space-8);
+}
+
 /* ==========================================================================
    App Hero
    ========================================================================== */
@@ -404,22 +412,46 @@
 }
 
 /* ==========================================================================
-   Dark Mode
+   Technical Architecture — Dark Mode
    ========================================================================== */
-html.dark .architecture-node {
+
+html[data-theme="dark"] .architecture-node {
     border-color: rgb(255 255 255 / 0.08);
+
     background:
         linear-gradient(145deg,
-            rgb(40 42 48 / 0.95),
-            rgb(27 29 34 / 0.9));
+            rgb(34 36 42 / 0.96),
+            rgb(24 26 31 / 0.92));
+
+    color: var(--color-text);
+
     box-shadow:
-        0 1.25rem 3.5rem rgb(0 0 0 / 0.28),
+        0 1.5rem 4rem rgb(0 0 0 / 0.32),
         inset 0 1px 0 rgb(255 255 255 / 0.04);
 }
 
-html.dark .architecture-node__tags li {
+html[data-theme="dark"] .architecture-node__eyebrow,
+html[data-theme="dark"] .architecture-node__description {
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .architecture-node__title {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .architecture-node__tags li {
     border-color: rgb(255 255 255 / 0.08);
-    background: rgb(255 255 255 / 0.04);
+    background: rgb(255 255 255 / 0.045);
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .architecture-diagram::before {
+    background: rgb(255 213 79 / 0.025);
+}
+
+html[data-theme="dark"] .architecture-connector__label {
+    color: var(--color-text-secondary);
+    background: var(--color-background);
 }
 
 /* ==========================================================================
@@ -652,7 +684,7 @@ html.dark .architecture-node__tags li {
 /* ==========================================================================
    Dark Mode Key Features
    ========================================================================== */
-html.dark .app-feature__crop {
+html[data-theme="dark"] .app-feature__crop {
     border-color: rgb(255 255 255 / 0.08);
     background: var(--color-surface);
     box-shadow:
@@ -660,11 +692,11 @@ html.dark .app-feature__crop {
         inset 0 1px 0 rgb(255 255 255 / 0.03);
 }
 
-html.dark .app-feature__media::before {
+html[data-theme="dark"] .app-feature__media::before {
     background: rgb(44 98 255 / 0.09);
 }
 
-html.dark .app-feature:nth-child(even) .app-feature__media::before {
+html[data-theme="dark"] .app-feature:nth-child(even) .app-feature__media::before {
     background: rgb(255 213 79 / 0.06);
 }
 
@@ -899,12 +931,12 @@ html.dark .app-feature:nth-child(even) .app-feature__media::before {
 /* ==========================================================================
    Dark Mode Engineering Decisions
    ========================================================================== */
-html.dark .decision-list,
-html.dark .decision {
+html[data-theme="dark"] .decision-list,
+html[data-theme="dark"] .decision {
     border-color: rgb(255 255 255 / 0.08);
 }
 
-html.dark .decision__benefits {
+html[data-theme="dark"] .decision__benefits {
     border-color: rgb(255 255 255 / 0.08);
     background: rgb(255 255 255 / 0.035);
     box-shadow:
@@ -912,6 +944,6 @@ html.dark .decision__benefits {
         inset 0 1px 0 rgb(255 255 255 / 0.03);
 }
 
-html.dark .decision__tradeoff {
+html[data-theme="dark"] .decision__tradeoff {
     background: rgb(255 213 79 / 0.045);
 }

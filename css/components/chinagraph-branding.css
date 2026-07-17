@@ -534,7 +534,7 @@ html[data-theme="dark"] .cg-crop {
 
 }
 
-html.dark .cg-pill {
+html[data-theme="dark"] .cg-pill {
 
     border-color:
         rgb(255 255 255 / .08);
