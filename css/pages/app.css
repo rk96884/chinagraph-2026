@@ -1,0 +1,917 @@
+/* ==========================================================================
+   App Case Study
+   ========================================================================== */
+
+.app-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-section {
+    margin-top: var(--space-16);
+    scroll-margin-top: 8rem;
+}
+
+.app-section__header {
+    margin-bottom: var(--space-8);
+}
+
+.app-cta {
+    padding-block:
+        clamp(4rem, 7vw, 6rem) clamp(6rem, 9vw, 8rem);
+}
+
+/* ==========================================================================
+   App Hero
+   ========================================================================== */
+
+.app-hero {
+    overflow: hidden;
+    padding-block:
+        clamp(4rem, 8vw, 8rem) clamp(5rem, 10vw, 9rem);
+}
+
+.app-hero__layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.85fr) minmax(28rem, 1.15fr);
+    align-items: center;
+    gap: clamp(3rem, 7vw, 7rem);
+}
+
+.app-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 37rem;
+}
+
+.app-hero__title {
+    position: relative;
+    z-index: 1;
+    margin-block:
+        var(--space-4) var(--space-6);
+    max-width: 10ch;
+    font-size: clamp(3.5rem, 6vw, 6.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.app-hero__intro {
+    max-width: 34rem;
+    margin-bottom: var(--space-6);
+    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+
+.app-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: var(--space-8);
+    /* or 2.5rem */
+    align-items: center;
+}
+
+.app-hero__media {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    margin: 0;
+    padding:
+        clamp(2rem, 4vw, 4rem) clamp(1rem, 2vw, 2rem);
+}
+
+.app-hero__blob {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 118%;
+    height: 105%;
+    border-radius:
+        46% 54% 59% 41% / 44% 42% 58% 56%;
+    background: rgb(44 98 255 / 0.055);
+    transform: translate(-50%, -50%) rotate(-3deg);
+}
+
+.app-hero__image-frame {
+    position: relative;
+    width: 100%;
+    max-width: 47rem;
+    overflow: hidden;
+    border-radius: 1.4rem;
+    background: var(--color-surface);
+    box-shadow:
+        0 2rem 5rem rgb(20 35 90 / 0.14),
+        0 0.25rem 1rem rgb(20 35 90 / 0.06);
+}
+
+.app-hero__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.app-hero__caption {
+    max-width: 34rem;
+    margin-top: var(--space-6);
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.app-hero__dots {
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+    z-index: -1;
+    width: 8rem;
+    height: 4rem;
+    opacity: 0.5;
+    background-image:
+        radial-gradient(circle,
+            rgb(44 98 255 / 0.35) 2px,
+            transparent 2.5px);
+    background-size: 1rem 1rem;
+}
+
+@media (max-width: 900px) {
+
+    .app-hero__layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .app-hero__content {
+        max-width: 45rem;
+    }
+
+    .app-hero__title {
+        max-width: 12ch;
+    }
+
+    .app-hero__media {
+        width: 100%;
+        max-width: 50rem;
+        margin-inline: auto;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .app-hero {
+        padding-block:
+            var(--space-10) var(--space-12);
+    }
+
+    .app-hero__title {
+        max-width: none;
+        font-size: clamp(3rem, 15vw, 4.5rem);
+    }
+
+    .app-hero__actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .app-hero__actions .button {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .app-hero__media {
+        padding-inline: 0;
+    }
+
+    .app-hero__blob {
+        width: 130%;
+        height: 100%;
+    }
+
+}
+
+/* ==========================================================================
+   Technical Architecture
+   ========================================================================== */
+
+.app-architecture {
+    overflow: visible;
+    padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.architecture-diagram {
+    position: relative;
+    display: grid;
+    grid-template-columns:
+        minmax(10rem, 0.95fr) minmax(4.5rem, 0.18fr) minmax(10rem, 1fr) minmax(4.5rem, 0.18fr) minmax(11rem, 1.12fr) minmax(4.5rem, 0.18fr) minmax(10rem, 0.95fr);
+    align-items: stretch;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-top: clamp(3rem, 6vw, 5rem);
+    padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.architecture-node {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 32rem;
+    min-width: 0;
+    overflow: hidden;
+    padding: clamp(1.5rem, 2.5vw, 2.25rem);
+    border: 1px solid rgb(25 35 70 / 0.08);
+    border-radius: 1.25rem;
+    background:
+        linear-gradient(145deg,
+            rgb(255 255 255 / 0.96),
+            rgb(255 255 255 / 0.82));
+    box-shadow:
+        0 1.25rem 3.5rem rgb(25 35 70 / 0.07),
+        inset 0 1px 0 rgb(255 255 255 / 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.architecture-node::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    width: 3.5rem;
+    height: 0.25rem;
+    border-radius: 999px;
+    background: var(--color-primary);
+    transform: translateY(-50%);
+}
+
+.architecture-node__eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--color-text-secondary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.architecture-node__title {
+    margin: 0 0 1rem;
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.architecture-node__description {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+}
+
+.architecture-node__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: auto 0 0;
+    padding: 1.5rem 0 0;
+    list-style: none;
+}
+
+.architecture-node__tags li {
+    margin: 0;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid rgb(25 35 70 / 0.08);
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.7);
+    color: var(--color-text-secondary);
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.architecture-node__tags li+li {
+    margin-top: 0;
+}
+
+/* ==========================================================================
+   Architecture Connector
+   ========================================================================== */
+
+.architecture-connector {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.architecture-connector__line {
+    width: 100%;
+    height: 2px;
+    background:
+        linear-gradient(90deg,
+            rgb(44 98 255 / 0.12),
+            rgb(44 98 255 / 0.65),
+            rgb(44 98 255 / 0.12));
+}
+
+.architecture-connector__label {
+    position: absolute;
+    top: calc(50% - 2.2rem);
+    left: 50%;
+    width: max-content;
+    max-width: 8rem;
+    transform: translateX(-50%);
+    color: var(--color-text-secondary);
+    font-size: 0.65rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    padding-inline: 0.4rem;
+    background: var(--color-background);
+    white-space: nowrap;
+}
+
+.architecture-connector__arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-top: 2px solid rgb(44 98 255 / 0.7);
+    border-right: 2px solid rgb(44 98 255 / 0.7);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.architecture-diagram::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -10% -4%;
+    border-radius:
+        47% 53% 58% 42% / 45% 40% 60% 55%;
+    background: rgb(255 213 79 / 0.045);
+    transform: rotate(-1deg);
+    inset: -6% 1% 2%;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 1100px) {
+
+    .architecture-diagram {
+        grid-template-columns: 1fr;
+        max-width: 44rem;
+        margin-inline: auto;
+    }
+
+    .architecture-connector {
+        min-height: 6rem;
+    }
+
+    .architecture-connector__line {
+        width: 2px;
+        height: 100%;
+        background:
+            linear-gradient(180deg,
+                rgb(44 98 255 / 0.12),
+                rgb(44 98 255 / 0.65),
+                rgb(44 98 255 / 0.12));
+    }
+
+    .architecture-connector__label {
+        top: 50%;
+        left: calc(50% + 2rem);
+        transform: translateY(-50%);
+        text-align: left;
+    }
+
+    .architecture-connector__arrow {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 50%;
+        transform:
+            translateX(-50%) rotate(135deg);
+    }
+
+}
+
+/* ==========================================================================
+   Dark Mode
+   ========================================================================== */
+html.dark .architecture-node {
+    border-color: rgb(255 255 255 / 0.08);
+    background:
+        linear-gradient(145deg,
+            rgb(40 42 48 / 0.95),
+            rgb(27 29 34 / 0.9));
+    box-shadow:
+        0 1.25rem 3.5rem rgb(0 0 0 / 0.28),
+        inset 0 1px 0 rgb(255 255 255 / 0.04);
+}
+
+html.dark .architecture-node__tags li {
+    border-color: rgb(255 255 255 / 0.08);
+    background: rgb(255 255 255 / 0.04);
+}
+
+/* ==========================================================================
+   Key Features
+   ========================================================================== */
+
+.app-features__list {
+    display: grid;
+    gap: clamp(4.5rem, 8vw, 7rem);
+    margin-top: clamp(3.5rem, 7vw, 6rem);
+}
+
+.app-feature {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: clamp(3rem, 7vw, 7rem);
+}
+
+.app-feature:nth-child(even) {
+    grid-template-columns:
+        minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+
+.app-feature:nth-child(even) .app-feature__content {
+    order: 2;
+}
+
+.app-feature:nth-child(even) .app-feature__media {
+    order: 1;
+}
+
+.app-feature__content {
+    max-width: 34rem;
+}
+
+.app-feature__number {
+    margin: 0 0 1rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.app-feature__title {
+    margin: 0 0 1.25rem;
+    font-size: clamp(2.25rem, 4vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.app-feature__intro {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+    line-height: 1.75;
+}
+
+.app-feature__details {
+    margin: 1.75rem 0 0;
+    padding-left: 1.2rem;
+}
+
+.app-feature__details li {
+    line-height: 1.55;
+}
+
+.app-feature__details li+li {
+    margin-top: 0.7rem;
+}
+
+.app-feature__media {
+    position: relative;
+    min-width: 0;
+    margin: 0;
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.app-feature__media::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius:
+        48% 52% 57% 43% / 43% 47% 53% 57%;
+    background: rgb(44 98 255 / 0.055);
+    transform: rotate(-2deg);
+}
+
+.app-feature:nth-child(even) .app-feature__media::before {
+    background: rgb(255 213 79 / 0.07);
+    transform: rotate(2deg);
+}
+
+.app-feature__crop {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid rgb(25 35 70 / 0.07);
+    border-radius: 1.4rem;
+    background: var(--color-surface);
+    box-shadow:
+        0 1.75rem 4.5rem rgb(25 35 70 / 0.12),
+        0 0.25rem 1rem rgb(25 35 70 / 0.05);
+}
+
+.app-feature__crop img {
+    position: absolute;
+    display: block;
+    width: auto;
+    max-width: none;
+    height: auto;
+}
+
+.app-feature__media figcaption {
+    max-width: 31rem;
+    margin: 1.5rem auto 0;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.65;
+    text-align: center;
+}
+
+/* Tournament list */
+.app-feature__media--tournaments img {
+    width: 100%;
+    top: -22%;
+    left: 0%;
+}
+
+/* Team information */
+.app-feature__media--teams img {
+    width: 100%;
+    top: -18%;
+    left: 0%;
+}
+
+/* Fixtures */
+.app-feature__media--fixtures img {
+    width: 100%;
+    top: -35%;
+    left: 0%;
+}
+
+/* Payments */
+.app-feature__media--payments img {
+    width: 128%;
+    top: 0%;
+    left: -28%;
+}
+
+.app-feature__media::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: clamp(3rem, 6vw, 5rem);
+    aspect-ratio: 1;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.75;
+}
+
+.app-feature:nth-child(odd) .app-feature__media::after {
+    top: 0;
+    right: 0;
+    background-image:
+        url("../../images/chinagraph-library/crosses/cross-medium-03-soft.webp");
+}
+
+.app-feature:nth-child(even) .app-feature__media::after {
+    bottom: 0.5rem;
+    left: 0;
+    background-image:
+        url("../../images/chinagraph-library/ticks/tick-large-01-soft.webp");
+}
+
+/* ==========================================================================
+   Responsive Key Features
+   ========================================================================== */
+@media (max-width: 900px) {
+
+    .app-feature,
+    .app-feature:nth-child(even) {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .app-feature:nth-child(even) .app-feature__content,
+    .app-feature:nth-child(even) .app-feature__media {
+        order: initial;
+    }
+
+    .app-feature__content {
+        max-width: 42rem;
+    }
+
+    .app-feature__media {
+        width: 100%;
+        max-width: 48rem;
+        margin-inline: auto;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .app-features__list {
+        gap: 5rem;
+    }
+
+    .app-feature__title {
+        font-size: clamp(2.25rem, 12vw, 3.5rem);
+    }
+
+    .app-feature__media {
+        padding-inline: 0;
+    }
+
+    .app-feature__crop {
+        aspect-ratio: 1 / 1;
+        border-radius: 1rem;
+    }
+
+}
+
+/* ==========================================================================
+   Dark Mode Key Features
+   ========================================================================== */
+html.dark .app-feature__crop {
+    border-color: rgb(255 255 255 / 0.08);
+    background: var(--color-surface);
+    box-shadow:
+        0 1.75rem 4.5rem rgb(0 0 0 / 0.3),
+        inset 0 1px 0 rgb(255 255 255 / 0.03);
+}
+
+html.dark .app-feature__media::before {
+    background: rgb(44 98 255 / 0.09);
+}
+
+html.dark .app-feature:nth-child(even) .app-feature__media::before {
+    background: rgb(255 213 79 / 0.06);
+}
+
+/* ==========================================================================
+   Engineering Decisions
+   ========================================================================== */
+
+.app-decisions {
+    position: relative;
+}
+
+.decision-list {
+    margin-top: clamp(3.5rem, 7vw, 6rem);
+    border-bottom: 1px solid rgb(25 35 70 / 0.1);
+}
+
+.decision {
+    display: grid;
+    grid-template-columns:
+        clamp(5rem, 9vw, 8rem) minmax(0, 1fr);
+    gap: clamp(1.5rem, 3.5vw, 3.5rem);
+    padding-block: clamp(3.5rem, 7vw, 6rem);
+    border-top: 1px solid rgb(25 35 70 / 0.1);
+}
+
+.decision__marker {
+    position: relative;
+    align-self: start;
+}
+
+.decision__marker img {
+    display: block;
+    width: clamp(5rem, 8vw, 7.5rem);
+    height: auto;
+    opacity: 0.78;
+    transform: rotate(-3deg);
+}
+
+.decision:nth-child(even) .decision__marker img {
+    transform: rotate(3deg);
+}
+
+.decision__body {
+    min-width: 0;
+}
+
+.decision__header {
+    max-width: 55rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.decision__eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--color-text-secondary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.decision__title {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.decision__summary {
+    max-width: 42rem;
+    margin: 1.25rem 0 0;
+    color: var(--color-text-secondary);
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    line-height: 1.65;
+}
+
+.decision__layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.05fr) minmax(18rem, 0.95fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+}
+
+.decision__reason {
+    max-width: 42rem;
+}
+
+.decision__reason h4,
+.decision__benefits h4,
+.decision__tradeoff h4 {
+    margin: 0 0 1rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.decision__reason p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.decision__reason p+p {
+    margin-top: 1.25rem;
+}
+
+.decision__supporting {
+    display: grid;
+    gap: 2rem;
+}
+
+.decision__benefits {
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border: 1px solid rgb(25 35 70 / 0.08);
+    border-radius: 1.25rem;
+    background: rgb(255 255 255 / 0.65);
+    box-shadow:
+        0 0.75rem 2.5rem rgb(25 35 70 / 0.045),
+        inset 0 1px 0 rgb(255 255 255 / 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.decision__checklist {
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.decision__checklist li {
+    position: relative;
+    margin: 0;
+    padding-left: 1.75rem;
+    line-height: 1.55;
+}
+
+.decision__checklist li::before {
+    content: "✓";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.decision__checklist li+li {
+    margin-top: 0;
+}
+
+.decision__tradeoff {
+    position: relative;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border-left: 3px solid rgb(255 213 79 / 0.9);
+    background: rgb(255 213 79 / 0.065);
+}
+
+.decision__tradeoff p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.decision-list {
+    position: relative;
+}
+
+.decision-list::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 5rem;
+    bottom: 5rem;
+    left: clamp(2.5rem, 4vw, 3.75rem);
+    width: 2px;
+    background:
+        linear-gradient(to bottom,
+            transparent,
+            rgb(255 213 79 / 0.28) 8%,
+            rgb(255 213 79 / 0.28) 92%,
+            transparent);
+}
+
+/* ==========================================================================
+   Responsive Engineering Decisions
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    .decision {
+        grid-template-columns:
+            clamp(4rem, 10vw, 6rem) minmax(0, 1fr);
+        gap: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .decision__layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .decision-list::before {
+        display: none;
+    }
+
+    .decision {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-block: 4rem;
+    }
+
+    .decision__marker img {
+        width: 5rem;
+    }
+
+    .decision__title {
+        font-size: clamp(2.5rem, 13vw, 4rem);
+    }
+
+    .decision__header {
+        margin-bottom: 2.5rem;
+    }
+
+}
+
+/* ==========================================================================
+   Dark Mode Engineering Decisions
+   ========================================================================== */
+html.dark .decision-list,
+html.dark .decision {
+    border-color: rgb(255 255 255 / 0.08);
+}
+
+html.dark .decision__benefits {
+    border-color: rgb(255 255 255 / 0.08);
+    background: rgb(255 255 255 / 0.035);
+    box-shadow:
+        0 1rem 3rem rgb(0 0 0 / 0.2),
+        inset 0 1px 0 rgb(255 255 255 / 0.03);
+}
+
+html.dark .decision__tradeoff {
+    background: rgb(255 213 79 / 0.045);
+}
