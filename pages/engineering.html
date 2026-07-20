@@ -40,7 +40,17 @@
                         A portfolio 25 years in the making.
                     </span>
                 </a>
+                <div class="nav-actions">
+                    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+                        aria-label="Open navigation menu">
 
+                        <span class="nav-toggle__bar"></span>
+                        <span class="nav-toggle__bar"></span>
+                        <span class="nav-toggle__bar"></span>
+                        <span class="nav-toggle__bar"></span>
+
+                    </button>
+                </div>
                 <ul class="nav-list" role="list">
 
                     <li>
@@ -106,7 +116,7 @@
                     <h1 class="engineering-hero__title engineering-hero__title--framed" id="engineering-title">
                         <span class="cg-frame cg-frame--engineering" aria-hidden="true"></span>
 
-                        Building for people,<br>
+                        Building for people,
                         not just browsers
                     </h1>
 
@@ -174,6 +184,10 @@
 
         <section class="engineering-section engineering-principles" id="principles" aria-labelledby="principles-title">
             <div class="container">
+                <p class="engineering-principles__note cg-note cg-note--small" aria-hidden="true">
+                    Good decisions,<br>
+                    repeated consistently.
+                </p>
 
                 <header class="engineering-section__header">
 
@@ -197,7 +211,7 @@
 
                 <div class="engineering-principles__grid">
 
-                    <article class="engineering-principle">
+                    <article class="engineering-principle engineering-principle--circle">
 
                         <p class="engineering-principle__number" aria-hidden="true">
                             01
@@ -213,7 +227,7 @@
 
                     </article>
 
-                    <article class="engineering-principle">
+                    <article class="engineering-principle engineering-principle--plain">
 
                         <p class="engineering-principle__number" aria-hidden="true">
                             02
@@ -229,7 +243,7 @@
 
                     </article>
 
-                    <article class="engineering-principle">
+                    <article class="engineering-principle engineering-principle--underline">
 
                         <p class="engineering-principle__number" aria-hidden="true">
                             03
@@ -245,7 +259,7 @@
 
                     </article>
 
-                    <article class="engineering-principle">
+                    <article class="engineering-principle engineering-principle--plain">
 
                         <p class="engineering-principle__number" aria-hidden="true">
                             04
@@ -261,7 +275,7 @@
 
                     </article>
 
-                    <article class="engineering-principle">
+                    <article class="engineering-principle engineering-principle--circle-alt">
 
                         <p class="engineering-principle__number" aria-hidden="true">
                             05
@@ -277,13 +291,13 @@
 
                     </article>
 
-                    <article class="engineering-principle">
+                    <article class="engineering-principle engineering-principle--tick">
 
                         <p class="engineering-principle__number" aria-hidden="true">
                             06
                         </p>
 
-                        <h3>Collaboration is part of engineering</h3>
+                        <h3>Collaboration is engineering</h3>
 
                         <p>
                             Good solutions emerge through communication with
@@ -303,181 +317,263 @@
          Development Workflow
          ================================================================ -->
 
-        <section class="engineering-section engineering-workflow" id="workflow" aria-labelledby="workflow-title">
+        <section class="engineering-workflow section" aria-labelledby="workflow-title">
             <div class="container">
 
-                <header class="engineering-section__header">
+                <header class="section-header engineering-workflow__header">
 
                     <p class="section-eyebrow">
                         Development workflow
                     </p>
 
-                    <h2 class="section-title section-title--chinagraph" id="workflow-title">
-                        <span class="section-title__marked-text">
-                            From problem to production
-                        </span>
+                    <h2 id="workflow-title" class="section-title engineering-workflow__title">
+                        From first question
+                        <span>to dependable release</span>
                     </h2>
 
-                    <p class="engineering-section__intro">
-                        My workflow keeps the user problem visible while breaking
-                        delivery into focused, reviewable stages.
+                    <p class="section-intro engineering-workflow__intro">
+                        A practical, iterative process that keeps users, quality
+                        and maintainability in view throughout the build.
                     </p>
 
                 </header>
 
-                <ol class="engineering-workflow__list">
+                <div class="engineering-workflow__layout">
 
-                    <li class="engineering-workflow__step">
+                    <ol class="workflow-list">
 
-                        <div class="engineering-workflow__marker" aria-hidden="true">
-                            <img src="../images/chinagraph-library/numbers/number-circle-01-medium.webp" alt=""
-                                width="160" height="160" loading="lazy">
-                        </div>
+                        <li class="workflow-step workflow-step--understand">
 
-                        <div class="engineering-workflow__content">
+                            <div class="workflow-step__marker" aria-hidden="true">
+                                <span>01</span>
+                            </div>
 
-                            <p class="engineering-workflow__eyebrow">
-                                Understand
+                            <article class="workflow-step__content">
+
+                                <div class="workflow-step__heading">
+
+                                    <p class="workflow-step__phase">
+                                        Discover
+                                    </p>
+
+                                    <h3>Understand the problem</h3>
+
+                                </div>
+
+                                <p class="workflow-step__description">
+                                    Clarify the audience, the real need and the desired
+                                    outcome before deciding what should be built.
+                                </p>
+
+                                <ul class="workflow-step__keywords" aria-label="Understand activities">
+                                    <li>Users</li>
+                                    <li>Goals</li>
+                                    <li>Constraints</li>
+                                </ul>
+
+                            </article>
+
+                        </li>
+
+                        <li class="workflow-step workflow-step--plan">
+
+                            <div class="workflow-step__marker" aria-hidden="true">
+                                <span>02</span>
+                            </div>
+
+                            <article class="workflow-step__content">
+
+                                <div class="workflow-step__heading">
+
+                                    <p class="workflow-step__phase">
+                                        Define
+                                    </p>
+
+                                    <h3>Plan the simplest route</h3>
+
+                                </div>
+
+                                <p class="workflow-step__description">
+                                    Break the work into manageable pieces, expose
+                                    dependencies and identify the risks that matter.
+                                </p>
+
+                                <ul class="workflow-step__keywords" aria-label="Planning activities">
+                                    <li>Scope</li>
+                                    <li>Structure</li>
+                                    <li>Priorities</li>
+                                </ul>
+
+                                <p class="workflow-step__note cg-note">
+                                    Keep the route clear.
+                                </p>
+
+                            </article>
+
+                        </li>
+
+                        <li class="workflow-step workflow-step--build">
+
+                            <div class="workflow-step__marker" aria-hidden="true">
+                                <span>03</span>
+                            </div>
+
+                            <article class="workflow-step__content">
+
+                                <div class="workflow-step__heading">
+
+                                    <p class="workflow-step__phase">
+                                        Create
+                                    </p>
+
+                                    <h3>Build progressively</h3>
+
+                                </div>
+
+                                <p class="workflow-step__description">
+                                    Develop in small, meaningful increments using
+                                    semantic markup, reusable components and
+                                    maintainable styles.
+                                </p>
+
+                                <ul class="workflow-step__keywords" aria-label="Build activities">
+                                    <li>Components</li>
+                                    <li>Git</li>
+                                    <li>Integration</li>
+                                </ul>
+
+                                <span class="workflow-step__underline" aria-hidden="true"></span>
+
+                            </article>
+
+                        </li>
+
+                        <li class="workflow-step workflow-step--review">
+
+                            <div class="workflow-step__marker" aria-hidden="true">
+                                <span>04</span>
+                            </div>
+
+                            <article class="workflow-step__content">
+
+                                <div class="workflow-step__heading">
+
+                                    <p class="workflow-step__phase">
+                                        Refine
+                                    </p>
+
+                                    <h3>Review while change is cheap</h3>
+
+                                </div>
+
+                                <p class="workflow-step__description">
+                                    Review code, design decisions and interactions
+                                    early enough for feedback to improve the outcome.
+                                </p>
+
+                                <ul class="workflow-step__keywords" aria-label="Review activities">
+                                    <li>Feedback</li>
+                                    <li>Refactoring</li>
+                                    <li>Collaboration</li>
+                                </ul>
+
+                                <p class="workflow-step__note cg-note">
+                                    Every review teaches something.
+                                </p>
+
+                            </article>
+
+                        </li>
+
+                        <li class="workflow-step workflow-step--test">
+
+                            <div class="workflow-step__marker" aria-hidden="true">
+                                <span>05</span>
+                            </div>
+
+                            <article class="workflow-step__content">
+
+                                <div class="workflow-step__heading">
+
+                                    <p class="workflow-step__phase">
+                                        Verify
+                                    </p>
+
+                                    <h3>Test the experience</h3>
+
+                                </div>
+
+                                <p class="workflow-step__description">
+                                    Check behaviour across devices, browsers and
+                                    interaction methods rather than testing only the
+                                    ideal path.
+                                </p>
+
+                                <ul class="workflow-step__keywords" aria-label="Testing activities">
+                                    <li>Accessibility</li>
+                                    <li>Responsive</li>
+                                    <li>Performance</li>
+                                </ul>
+
+                            </article>
+
+                        </li>
+
+                        <li class="workflow-step workflow-step--ship">
+
+                            <div class="workflow-step__marker" aria-hidden="true">
+                                <span>06</span>
+                            </div>
+
+                            <article class="workflow-step__content">
+
+                                <div class="workflow-step__heading">
+
+                                    <p class="workflow-step__phase">
+                                        Release
+                                    </p>
+
+                                    <h3>Ship, observe and improve</h3>
+
+                                </div>
+
+                                <p class="workflow-step__description">
+                                    Release carefully, learn from real use and feed
+                                    those lessons into the next iteration.
+                                </p>
+
+                                <ul class="workflow-step__keywords" aria-label="Release activities">
+                                    <li>Deploy</li>
+                                    <li>Measure</li>
+                                    <li>Improve</li>
+                                </ul>
+
+                            </article>
+
+                        </li>
+
+                    </ol>
+
+                    <aside class="engineering-workflow__aside">
+
+                        <div class="engineering-workflow__principle">
+
+                            <p class="engineering-workflow__principle-label">
+                                Working principle
                             </p>
 
-                            <h3>Research the problem</h3>
-
-                            <p>
-                                Clarify the audience, desired outcome, constraints
-                                and existing pain points before proposing a
-                                technical solution.
+                            <p class="engineering-workflow__principle-text cg-note">
+                                Build the smallest useful thing.
+                                Then make it better.
                             </p>
+
+                            <span class="engineering-workflow__principle-mark" aria-hidden="true"></span>
 
                         </div>
 
-                    </li>
+                    </aside>
 
-                    <li class="engineering-workflow__step">
-
-                        <div class="engineering-workflow__marker" aria-hidden="true">
-                            <img src="../images/chinagraph-library/numbers/number-circle-02-medium.webp" alt=""
-                                width="160" height="160" loading="lazy">
-                        </div>
-
-                        <div class="engineering-workflow__content">
-
-                            <p class="engineering-workflow__eyebrow">
-                                Plan
-                            </p>
-
-                            <h3>Shape the solution</h3>
-
-                            <p>
-                                Define the information architecture, component
-                                boundaries, data requirements and smallest useful
-                                version of the feature.
-                            </p>
-
-                        </div>
-
-                    </li>
-
-                    <li class="engineering-workflow__step">
-
-                        <div class="engineering-workflow__marker" aria-hidden="true">
-                            <img src="../images/chinagraph-library/numbers/number-circle-03-medium.webp" alt=""
-                                width="160" height="160" loading="lazy">
-                        </div>
-
-                        <div class="engineering-workflow__content">
-
-                            <p class="engineering-workflow__eyebrow">
-                                Build
-                            </p>
-
-                            <h3>Develop incrementally</h3>
-
-                            <p>
-                                Create semantic structure first, then introduce
-                                responsive styling, interaction and data
-                                integration through focused feature branches.
-                            </p>
-
-                        </div>
-
-                    </li>
-
-                    <li class="engineering-workflow__step">
-
-                        <div class="engineering-workflow__marker" aria-hidden="true">
-                            <img src="../images/chinagraph-library/numbers/number-circle-04-medium.webp" alt=""
-                                width="160" height="160" loading="lazy">
-                        </div>
-
-                        <div class="engineering-workflow__content">
-
-                            <p class="engineering-workflow__eyebrow">
-                                Review
-                            </p>
-
-                            <h3>Test the complete experience</h3>
-
-                            <p>
-                                Review responsive behaviour, keyboard navigation,
-                                content clarity, visual states and integration
-                                points rather than testing only the happy path.
-                            </p>
-
-                        </div>
-
-                    </li>
-
-                    <li class="engineering-workflow__step">
-
-                        <div class="engineering-workflow__marker" aria-hidden="true">
-                            <img src="../images/chinagraph-library/numbers/number-circle-05-medium.webp" alt=""
-                                width="160" height="160" loading="lazy">
-                        </div>
-
-                        <div class="engineering-workflow__content">
-
-                            <p class="engineering-workflow__eyebrow">
-                                Refine
-                            </p>
-
-                            <h3>Simplify and polish</h3>
-
-                            <p>
-                                Remove duplication, tighten naming, improve
-                                feedback states and resolve details that make the
-                                interface easier to understand.
-                            </p>
-
-                        </div>
-
-                    </li>
-
-                    <li class="engineering-workflow__step">
-
-                        <div class="engineering-workflow__marker" aria-hidden="true">
-                            <img src="../images/chinagraph-library/numbers/number-circle-06-medium.webp" alt=""
-                                width="160" height="160" loading="lazy">
-                        </div>
-
-                        <div class="engineering-workflow__content">
-
-                            <p class="engineering-workflow__eyebrow">
-                                Deliver
-                            </p>
-
-                            <h3>Ship and learn</h3>
-
-                            <p>
-                                Merge reviewed work, confirm the production
-                                experience and use feedback to shape the next
-                                iteration.
-                            </p>
-
-                        </div>
-
-                    </li>
-
-                </ol>
+                </div>
 
             </div>
         </section>
@@ -487,86 +583,126 @@
          Toolbelt
          ================================================================ -->
 
-        <section class="engineering-section engineering-toolbelt" id="toolbelt" aria-labelledby="toolbelt-title">
+        <section class="engineering-toolbelt section" aria-labelledby="toolbelt-title">
             <div class="container">
 
-                <header class="engineering-section__header">
+                <header class="section-header engineering-toolbelt__header">
 
                     <p class="section-eyebrow">
-                        My toolbelt
+                        Engineering toolbelt
                     </p>
 
-                    <h2 class="section-title section-title--chinagraph" id="toolbelt-title">
-                        <span class="section-title__marked-text">
-                            Tools chosen for the job
-                        </span>
+                    <h2 id="toolbelt-title" class="section-title engineering-toolbelt__title">
+                        Technologies chosen
+                        <span>because they solve problems.</span>
                     </h2>
 
-                    <p class="engineering-section__intro">
-                        Technologies are most useful when understood in context,
-                        so I group them by the role they play in delivery.
+                    <p class="section-intro engineering-toolbelt__intro">
+                        I enjoy learning new tools, but I choose technology based on
+                        maintainability, performance and the needs of the project rather
+                        than trends.
                     </p>
 
                 </header>
 
-                <div class="engineering-toolbelt__grid">
+                <div class="toolbelt-grid" class="toolbelt-heading">
 
-                    <article class="engineering-toolbelt__group">
 
-                        <h3>Interface development</h3>
+                    <article class="toolbelt-group toolbelt-group--foundations">
+
+                        <h3>Foundations</h3>
+                        <img src="../images/chinagraph-library/underlines/underline-thick-01-soft.webp" alt=""
+                            aria-hidden="true" class="cg-underline">
 
                         <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
+
+                            <li>Semantic HTML5</li>
+                            <li>Modern CSS</li>
+                            <li>Responsive Design</li>
+                            <li>Accessibility (WCAG)</li>
+
+                        </ul>
+
+                        <div class="cg-note-wrapper">
+
+                            <p class="cg-note">
+
+                                HTML first.
+                                Framework second.
+
+                            </p>
+
+                            <img src="../images/chinagraph-library/frames/square-frame-01-soft.webp" alt=""
+                                aria-hidden="true" class="cg-scribble">
+
+                        </div>
+
+                    </article>
+
+                    <article class="toolbelt-group toolbelt-group--frontend">
+
+                        <h3>Front End</h3>
+
+                        <ul>
+
+                            <li>JavaScript (ES6+)</li>
                             <li>React</li>
-                            <li>Responsive design</li>
-                            <li>WCAG</li>
+                            <li>API Integration</li>
+                            <li>Component Architecture</li>
+
                         </ul>
 
                     </article>
 
-                    <article class="engineering-toolbelt__group">
+                    <article class="toolbelt-group toolbelt-group--backend">
 
-                        <h3>Application development</h3>
+                        <h3>Back End</h3>
 
                         <ul>
+
                             <li>ASP.NET Core</li>
-                            <li>REST APIs</li>
                             <li>Entity Framework Core</li>
                             <li>SQLite</li>
-                            <li>Data modelling</li>
-                            <li>CRUD workflows</li>
+                            <li>REST APIs</li>
+
                         </ul>
 
                     </article>
 
-                    <article class="engineering-toolbelt__group">
+                    <article class="toolbelt-group toolbelt-group--workflow toolbelt-heading">
 
-                        <h3>Delivery and quality</h3>
+                        <h3>Workflow</h3>
+                        <img src="../images/chinagraph-library/circles/circle-01-soft.webp" alt="" aria-hidden="true"
+                            class="cg-circle">
 
                         <ul>
+
                             <li>Git</li>
                             <li>GitHub</li>
-                            <li>Feature branches</li>
-                            <li>Pull requests</li>
-                            <li>Code review</li>
-                            <li>Browser testing</li>
+                            <li>Pull Requests</li>
+                            <li>AI-assisted Development</li>
+
                         </ul>
+
+                        <p class="cg-note">
+                            Automate repetitive work.
+                        </p>
 
                     </article>
 
-                    <article class="engineering-toolbelt__group">
+                    <article class="toolbelt-group toolbelt-group--quality toolbelt-heading">
 
-                        <h3>Collaboration</h3>
+                        <h3>Quality</h3>
+                        <img src="../images/chinagraph-library/ticks/tick-large-01-soft.webp" alt="" aria-hidden="true"
+                            class="cg-tick">
 
                         <ul>
-                            <li>Agile delivery</li>
-                            <li>Jira</li>
-                            <li>Confluence</li>
-                            <li>Stakeholder communication</li>
-                            <li>Developer mentoring</li>
-                            <li>Cross-functional teamwork</li>
+
+                            <li>Performance</li>
+                            <li>Cross-browser Testing</li>
+                            <li>Accessibility Reviews</li>
+                            <li>Code Reviews</li>
+
                         </ul>
 
                     </article>
@@ -911,6 +1047,8 @@
 
     </footer>
     <script src="../js/chinagraph-authentic-marks.js" defer>
+    </script>
+    <script src="../js/navigation.js" defer>
     </script>
 
 </body>

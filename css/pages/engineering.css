@@ -29,3 +29,1418 @@
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     line-height: 1.65;
 }
+
+/* ==========================================================================
+   Engineering Hero
+   ========================================================================== */
+
+.engineering-hero {
+    position: relative;
+    overflow: hidden;
+    padding-block:
+        clamp(5rem, 9vw, 9rem) clamp(6rem, 11vw, 10rem);
+    align-items: start;
+}
+
+.engineering-hero__layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) minmax(22rem, 0.82fr);
+    align-items: center;
+    gap: clamp(4rem, 8vw, 8rem);
+}
+
+.engineering-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 48rem;
+}
+
+.engineering-hero__title {
+    position: relative;
+    z-index: 1;
+    max-width: 10ch;
+    margin:
+        var(--space-4) 0 var(--space-6);
+    font-size: clamp(3.5rem, 6.2vw, 6.4rem);
+    line-height: 0.96;
+    letter-spacing: -0.06em;
+}
+
+.engineering-hero__title--framed {
+    display: inline-block;
+}
+
+.engineering-hero__intro {
+    max-width: 39rem;
+    margin: 0 0 var(--space-7);
+    color: var(--color-text-secondary);
+    font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+    line-height: 1.75;
+}
+
+.engineering-hero__pill-list {
+    gap: 0.8rem;
+    margin-bottom: var(--space-8);
+    margin-top: 1.5rem;
+    max-width: 34rem;
+}
+
+.engineering-hero__pill-list li+li {
+    margin-top: 0;
+}
+
+.engineering-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* ==========================================================================
+   Engineering Hero Checklist
+   ========================================================================== */
+
+.engineering-hero__checklist {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 34rem;
+    margin: 0;
+    margin-top: 2.75rem;
+    padding: clamp(2rem, 4vw, 3.25rem);
+
+    border: 1px solid rgb(25 35 70 / 0.08);
+    border-radius: 1.5rem;
+
+    background:
+        linear-gradient(145deg,
+            rgb(255 255 255 / 0.94),
+            rgb(255 255 255 / 0.78));
+
+    box-shadow:
+        0 2rem 5rem rgb(25 35 70 / 0.11),
+        inset 0 1px 0 rgb(255 255 255 / 0.95);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    transform: rotate(1deg);
+}
+
+.engineering-hero__checklist::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -7% -8%;
+    border-radius:
+        47% 53% 58% 42% / 44% 40% 60% 56%;
+    background: rgb(255 213 79 / 0.08);
+    transform: rotate(-3deg);
+}
+
+.engineering-hero__checklist-label {
+    margin: 0 0 0.75rem;
+    color: var(--color-primary);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.engineering-hero__checklist-title {
+    max-width: 10ch;
+    margin: 0 0 2rem;
+    font-size: clamp(2.25rem, 4vw, 3.75rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.engineering-checklist {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.engineering-checklist li {
+    position: relative;
+    margin: 0;
+    padding:
+        0.8rem 0.75rem 0.8rem 2.6rem;
+
+    border-bottom: 1px solid rgb(25 35 70 / 0.075);
+
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.engineering-checklist li+li {
+    margin-top: 0;
+}
+
+.engineering-checklist li::before {
+    content: "✓";
+    position: absolute;
+    top: 0.72rem;
+    left: 0.3rem;
+
+    display: grid;
+    width: 1.45rem;
+    height: 1.45rem;
+    place-items: center;
+
+    border-radius: 50%;
+    background: rgb(44 98 255 / 0.09);
+
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.engineering-checklist li:last-child {
+    border-bottom: 0;
+}
+
+.engineering-hero::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 8%;
+    right: -12%;
+    width: min(48rem, 58vw);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle,
+            rgb(44 98 255 / 0.075),
+            transparent 68%);
+}
+
+.engineering-hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 7%;
+    right: 9%;
+    width: 8rem;
+    height: 5rem;
+    opacity: 0.45;
+
+    background-image:
+        radial-gradient(circle,
+            rgb(44 98 255 / 0.34) 2px,
+            transparent 2.5px);
+    background-size: 1rem 1rem;
+}
+
+
+/* ==========================================================================
+   Engineering Media Queries
+   ========================================================================== */
+@media (max-width: 950px) {
+
+    .engineering-hero__layout {
+        grid-template-columns: 1fr;
+        gap: clamp(4rem, 8vw, 6rem);
+    }
+
+    .engineering-hero__content {
+        max-width: 50rem;
+    }
+
+    .engineering-hero__checklist {
+        max-width: 42rem;
+        margin-inline: auto;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .engineering-hero {
+        padding-block:
+            var(--space-10) var(--space-14);
+    }
+
+    .engineering-hero__title {
+        max-width: none;
+        font-size: clamp(3.25rem, 15vw, 5rem);
+    }
+
+    .engineering-hero__actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .engineering-hero__actions .button {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .engineering-hero__checklist {
+        padding: 1.75rem;
+        transform: none;
+        overflow: visible;
+    }
+
+    .engineering-hero__checklist-title {
+        max-width: none;
+    }
+
+    .cg-mark--engineering-tick {
+        right: 1rem;
+        bottom: 1rem;
+
+        width: 2.75rem;
+
+        opacity: 0.6;
+        transform: rotate(-8deg);
+    }
+
+}
+
+/* ==========================================================================
+   Engineering Hero — Dark Theme
+   ========================================================================== */
+
+html[data-theme="dark"] .engineering-hero__checklist {
+    border-color: rgb(255 255 255 / 0.08);
+
+    background:
+        linear-gradient(145deg,
+            rgb(37 39 45 / 0.95),
+            rgb(25 27 32 / 0.9));
+
+    box-shadow:
+        0 2rem 5rem rgb(0 0 0 / 0.32),
+        inset 0 1px 0 rgb(255 255 255 / 0.04);
+}
+
+html[data-theme="dark"] .engineering-hero__checklist::before {
+    background: rgb(255 213 79 / 0.035);
+}
+
+html[data-theme="dark"] .engineering-checklist li {
+    border-color: rgb(255 255 255 / 0.075);
+}
+
+html[data-theme="dark"] .engineering-checklist li::before {
+    background: rgb(44 98 255 / 0.15);
+}
+
+html[data-theme="dark"] .engineering-hero::before {
+    background:
+        radial-gradient(circle,
+            rgb(44 98 255 / 0.11),
+            transparent 68%);
+}
+
+/* ==========================================================================
+   Engineering Principles
+   ========================================================================== */
+
+.engineering-principles {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--color-border);
+}
+
+.engineering-principles .engineering-section__header {
+    position: relative;
+    z-index: 2;
+    margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.engineering-principles .engineering-section__intro {
+    max-width: 40rem;
+}
+
+.engineering-principles__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: clamp(2.5rem, 5vw, 5.5rem);
+    row-gap: clamp(3.5rem, 5.5vw, 5rem);
+}
+
+.engineering-principle {
+    position: relative;
+    min-width: 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.engineering-principle__number::before,
+.engineering-principle__number::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.engineering-principle--circle .engineering-principle__number::before {
+    inset: -0.7rem -1rem;
+
+    background-image:
+        url("../../images/chinagraph-library/circles/circle-variant.webp");
+
+    opacity: 0.56;
+    transform: rotate(-5deg) scale(1.08);
+}
+
+.engineering-principle:nth-child(4) .engineering-principle__number {
+    transform: rotate(-1deg);
+}
+
+.engineering-principle--underline .engineering-principle__number::after {
+    left: -20.15rem;
+    right: -0.4rem;
+    bottom: -0.2rem;
+    height: 0.7rem;
+
+    background-image:
+        url("../../images/chinagraph-library/underlines/underline-thick-01-soft.webp");
+
+    opacity: 0.8;
+    transform: rotate(-2deg);
+}
+
+.engineering-principle--circle-alt .engineering-principle__number::before {
+    inset: -0.9rem -1.15rem;
+
+    background-image:
+        url("../../images/chinagraph-library/circles/circle-01-soft.webp");
+
+    opacity: 0.75;
+    transform: rotate(8deg) scale(1.18);
+}
+
+.engineering-principle--tick .engineering-principle__number::after {
+    top: -0.75rem;
+    left: 1.7rem;
+    width: 2.2rem;
+    height: 2.2rem;
+
+    background-image:
+        url("../../images/chinagraph-library/ticks/tick-large-01-soft.webp");
+
+    opacity: 0.78;
+    transform: rotate(-9deg);
+}
+
+.engineering-principle h3 {
+    max-width: 14ch;
+    margin: 0 0 1rem;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+}
+
+.engineering-principle>p:last-child {
+    max-width: 32rem;
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 1.03rem;
+    line-height: 1.75;
+}
+
+.engineering-principle:nth-child(2n) .engineering-principle__number {
+    transform: rotate(1deg);
+}
+
+.engineering-principle:nth-child(3n) .engineering-principle__number {
+    transform: rotate(-1.5deg);
+}
+
+.engineering-principle:nth-child(1) .engineering-principle__number,
+.engineering-principle:nth-child(5) .engineering-principle__number {
+    position: relative;
+    display: inline-block;
+}
+
+.engineering-principle:nth-child(1) {
+    transform: translateY(-0.2rem);
+}
+
+.engineering-principle:nth-child(3) {
+    transform: translateY(0.35rem);
+}
+
+.engineering-principle:nth-child(5) {
+    transform: translateY(-0.15rem);
+}
+
+.engineering-principle:nth-child(6) {
+    transform: translateY(0.25rem);
+}
+
+.engineering-principles::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: clamp(1.5rem, 5vw, 5rem);
+    width: 1px;
+    height: 100%;
+    background: rgb(44 98 255 / 0.09);
+}
+
+.engineering-principles::after {
+    content: "";
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+    width: 7rem;
+    height: 5rem;
+    opacity: 0.32;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle,
+            rgb(44 98 255 / 0.42) 1.5px,
+            transparent 2px);
+    background-size: 0.85rem 0.85rem;
+}
+
+.engineering-principles__note {
+    position: absolute;
+    top: clamp(9.5rem, 14vw, 13rem);
+    right: -36rem;
+    margin: 0;
+    color: var(--color-primary);
+    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+    font-weight: 600;
+    line-height: 1.45;
+    transform: rotate(3deg);
+    opacity: 0.68;
+}
+
+/* ==========================================================================
+   Engineering Principles — Media Queries
+   ========================================================================== */
+
+@media (max-width: 1000px) {
+
+    .engineering-principles__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .engineering-principles__note {
+        display: none;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .engineering-principles__grid {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+
+    .engineering-principle {
+        padding-top: 1.25rem;
+    }
+
+    .engineering-principle h3 {
+        max-width: none;
+    }
+
+    .engineering-principles::before,
+    .engineering-principles::after {
+        display: none;
+    }
+
+    @media (max-width: 650px) {
+
+        .engineering-principle {
+            transform: none;
+        }
+
+        .engineering-principle--tick .engineering-principle__number::after {
+            right: -1.8rem;
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+    }
+
+}
+
+/* ==========================================================================
+   Engineering Principles — Dark Theme
+   ========================================================================== */
+
+html[data-theme="dark"] .engineering-principles {
+    border-color: rgb(255 255 255 / 0.08);
+}
+
+html[data-theme="dark"] .engineering-principle {
+    border-color: rgb(255 255 255 / 0.1);
+}
+
+html[data-theme="dark"] .engineering-principles::before {
+    background: rgb(96 142 255 / 0.12);
+}
+
+html[data-theme="dark"] .engineering-principle:nth-child(1) .engineering-principle__number::after,
+html[data-theme="dark"] .engineering-principle:nth-child(5) .engineering-principle__number::after {
+    border-color: rgb(96 142 255 / 0.55);
+}
+
+html[data-theme="dark"] .engineering-principle--circle .engineering-principle__number::before {
+    opacity: 0.72;
+}
+
+html[data-theme="dark"] .engineering-principle--circle-alt .engineering-principle__number::before {
+    opacity: 0.58;
+}
+
+html[data-theme="dark"] .engineering-principle--underline .engineering-principle__number::after,
+html[data-theme="dark"] .engineering-principle--tick .engineering-principle__number::after {
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   Development Workflow
+   ========================================================================== */
+
+.engineering-workflow {
+    position: relative;
+    overflow: clip;
+}
+
+.engineering-workflow::before {
+    content: "";
+
+    position: absolute;
+    top: 18rem;
+    right: -8rem;
+
+    width: 20rem;
+    height: 20rem;
+
+    border-radius: 50%;
+
+    background:
+        color-mix(in srgb,
+            var(--colour-chinagraph) 10%,
+            transparent);
+
+    filter: blur(1px);
+
+    pointer-events: none;
+}
+
+.engineering-workflow__header {
+    position: relative;
+
+    max-width: 52rem;
+    margin-bottom: var(--space-16);
+}
+
+.engineering-workflow__title {
+    max-width: 18ch;
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 0.98;
+}
+
+.engineering-workflow__title span {
+    display: inline;
+}
+
+.engineering-workflow__intro {
+    max-width: 42rem;
+}
+
+.engineering-workflow__layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) minmax(11rem, 15rem);
+
+    gap: clamp(var(--space-10),
+            7vw,
+            var(--space-20));
+
+    align-items: start;
+}
+
+/* ==========================================================================
+   Workflow list
+   ========================================================================== */
+
+.workflow-list {
+    position: relative;
+
+    display: grid;
+    gap: 0;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.workflow-list::before {
+    content: "";
+
+    position: absolute;
+    top: 2.15rem;
+    bottom: 2.15rem;
+    left: 2rem;
+
+    width: 1px;
+
+    background:
+        linear-gradient(to bottom,
+            transparent,
+            var(--colour-border) 5%,
+            var(--colour-border) 95%,
+            transparent);
+}
+
+/* ==========================================================================
+   Workflow step
+   ========================================================================== */
+
+.workflow-step {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr);
+
+    gap: var(--space-7);
+    align-items: start;
+}
+
+.workflow-step+.workflow-step {
+    margin-top: var(--space-8);
+}
+
+.workflow-step__marker {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    place-items: center;
+
+    width: 4rem;
+    height: 4rem;
+
+    border: 1px solid var(--colour-border);
+    border-radius: 50%;
+
+    background-color: var(--colour-background);
+
+    transition:
+        border-color var(--transition-normal),
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.workflow-step__marker span {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+
+    letter-spacing: 0.09em;
+
+    color: var(--colour-text-muted);
+}
+
+.workflow-step:hover .workflow-step__marker {
+    transform: translateY(-2px);
+
+    border-color:
+        color-mix(in srgb,
+            var(--colour-primary) 50%,
+            var(--colour-border));
+}
+
+.workflow-step__content {
+    position: relative;
+
+    min-width: 0;
+
+    padding-top: 0.15rem;
+    padding-bottom: var(--space-12);
+
+    border-bottom: 1px solid var(--colour-border);
+}
+
+.workflow-step:last-child .workflow-step__content {
+    padding-bottom: var(--space-4);
+    border-bottom: 0;
+}
+
+/* ==========================================================================
+   Step heading
+   ========================================================================== */
+
+.workflow-step__heading {
+    display: grid;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+
+    gap: var(--space-6);
+    align-items: baseline;
+
+    margin-bottom: var(--space-4);
+}
+
+.workflow-step__phase {
+    margin: 0;
+    margin-left: 1rem;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--colour-primary);
+}
+
+.workflow-step__heading h3 {
+    margin: 0;
+
+    font-size:
+        clamp(1.6rem,
+            2.4vw,
+            2.35rem);
+
+    line-height: 1.1;
+}
+
+.workflow-step__description {
+    max-width: 39rem;
+
+    margin:
+        0 0 var(--space-5) calc(5rem + var(--space-5));
+
+    color: var(--colour-text-muted);
+}
+
+/* ==========================================================================
+   Keywords
+   ========================================================================== */
+
+.workflow-step__keywords {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-2);
+
+    margin:
+        0 0 0 calc(5rem + var(--space-5));
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.workflow-step__keywords li {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 2rem;
+
+    padding: 0.3rem 0.75rem;
+
+    border: 1px solid var(--colour-border);
+    border-radius: var(--radius-pill);
+
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+
+    letter-spacing: 0.025em;
+
+    color: var(--colour-text-muted);
+    background-color: var(--colour-surface);
+}
+
+.workflow-step__keywords li {
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.workflow-step__description,
+.workflow-step__keywords {
+    margin-left: calc(5.5rem + var(--space-6));
+}
+
+/* ==========================================================================
+   Notebook annotations
+   ========================================================================== */
+
+.workflow-step__note {
+    position: absolute;
+    right: -23rem;
+    bottom: var(--space-8);
+
+    max-width: 9rem;
+    margin: 0;
+
+    font-size: 1.2rem;
+    line-height: 1;
+
+    color: var(--colour-text-muted);
+
+    transform: rotate(-3deg);
+}
+
+.workflow-step--review .workflow-step__note {
+    right: -26rem;
+    transform: rotate(2deg);
+}
+
+.workflow-step__underline {
+    position: absolute;
+    left: calc(5.5rem + var(--space-6));
+    bottom: var(--space-6);
+
+    width: 8.5rem;
+    height: 0.6rem;
+
+    opacity: 0.75;
+
+    background:
+        linear-gradient(178deg,
+            transparent 28%,
+            var(--colour-chinagraph) 30%,
+            var(--colour-chinagraph) 65%,
+            transparent 67%);
+
+    transform: rotate(-1deg);
+}
+
+/* ==========================================================================
+   Highlighted stages
+   ========================================================================== */
+
+.workflow-step--understand .workflow-step__marker,
+.workflow-step--ship .workflow-step__marker {
+    border-color: var(--colour-chinagraph);
+
+    box-shadow:
+        0 0 0 0.35rem color-mix(in srgb,
+            var(--colour-chinagraph) 14%,
+            transparent);
+}
+
+.workflow-step--ship .workflow-step__marker::after {
+    content: "";
+
+    position: absolute;
+    right: -0.5rem;
+    bottom: -0.15rem;
+
+    width: 1.1rem;
+    height: 0.55rem;
+
+    border-left: 3px solid var(--colour-primary);
+    border-bottom: 3px solid var(--colour-primary);
+
+    transform: rotate(-45deg);
+}
+
+/* ==========================================================================
+   Workflow side note
+   ========================================================================== */
+.workflow-step--plan .workflow-step__content {
+    padding-bottom: var(--space-16);
+}
+
+.workflow-step--review .workflow-step__content {
+    padding-bottom: var(--space-16);
+}
+
+.engineering-workflow__aside {
+    position: relative;
+    align-self: stretch;
+}
+
+.engineering-workflow__principle {
+    position: sticky;
+    top: 9rem;
+    padding-left: var(--space-3);
+    padding-top: var(--space-12);
+}
+
+.engineering-workflow__principle-label {
+    margin-bottom: var(--space-4);
+
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--colour-text-muted);
+}
+
+.engineering-workflow__principle-text {
+    position: relative;
+    z-index: 1;
+
+    max-width: 10rem;
+    margin: 0;
+
+    font-size: clamp(1.65rem, 2.1vw, 2rem);
+    line-height: 1.02;
+
+    transform: rotate(-3deg);
+}
+
+.engineering-workflow__principle-mark {
+    position: absolute;
+    top: 5.5rem;
+    left: -1rem;
+
+    width: 11rem;
+    height: 7rem;
+
+    border: 0.35rem solid var(--colour-chinagraph);
+    border-radius: 48% 52% 45% 55% / 55% 42% 58% 45%;
+
+    opacity: 0.35;
+
+    transform: rotate(-6deg);
+
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   Development Workflow — Media Queries
+   ========================================================================== */
+
+@media (max-width: 980px) {
+
+    .engineering-workflow__layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .engineering-workflow__aside {
+        padding-left: calc(4rem + var(--space-7));
+    }
+
+    .engineering-workflow__principle {
+        position: static;
+
+        max-width: 24rem;
+        padding-top: 0;
+    }
+
+    .engineering-workflow__principle-text {
+        max-width: 18rem;
+    }
+
+    .engineering-workflow__principle-mark {
+        top: -0.5rem;
+        left: -1.25rem;
+
+        width: 15rem;
+        height: 6rem;
+    }
+
+    .workflow-step__phase {
+        margin: 0;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .engineering-workflow__header {
+        margin-bottom: var(--space-10);
+    }
+
+    .engineering-workflow__title {
+        max-width: 100%;
+    }
+
+    .workflow-list::before {
+        top: 1.6rem;
+        bottom: 1.6rem;
+        left: 1.5rem;
+    }
+
+    .workflow-step {
+        grid-template-columns: 3rem minmax(0, 1fr);
+        gap: var(--space-4);
+    }
+
+    .workflow-step+.workflow-step {
+        margin-top: var(--space-6);
+    }
+
+    .workflow-step__marker {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .workflow-step__marker span {
+        font-size: 0.7rem;
+    }
+
+    .workflow-step__content {
+        padding-bottom: var(--space-8);
+    }
+
+    .workflow-step__heading {
+        display: block;
+
+        margin-bottom: var(--space-3);
+    }
+
+    .workflow-step__phase {
+        margin-bottom: var(--space-2);
+    }
+
+    .workflow-step__heading h3 {
+        font-size: clamp(1.45rem, 7vw, 1.9rem);
+    }
+
+    .workflow-step__description,
+    .workflow-step__keywords {
+        margin-left: 0;
+    }
+
+    .workflow-step__description {
+        margin-bottom: var(--space-4);
+    }
+
+    .workflow-step__keywords {
+        gap: var(--space-2);
+    }
+
+    .workflow-step__note {
+        position: static;
+        right: var(--space-5);
+        max-width: 12rem;
+
+        margin-top: var(--space-16);
+        margin-left: auto;
+
+        font-size: 1.2rem;
+    }
+
+    .workflow-step--review .workflow-step__note {
+        right: var(--space-5);
+        transform: rotate(0deg);
+    }
+
+    .workflow-step__underline {
+        position: static;
+
+        display: block;
+
+        width: 7rem;
+        height: 0.6rem;
+
+        margin-top: var(--space-4);
+        margin-left: 0;
+    }
+
+    .engineering-workflow__aside {
+        padding-left: calc(3rem + var(--space-4));
+    }
+
+    .engineering-workflow__principle-text {
+        font-size: 1.75rem;
+    }
+}
+
+/* ==========================================================================
+   Development Workflow — Dark Theme
+   ========================================================================== */
+
+html[data-theme="dark"] .workflow-step__marker {
+    background-color: var(--colour-background);
+}
+
+html[data-theme="dark"] .workflow-step__keywords li {
+    background-color:
+        color-mix(in srgb,
+            var(--colour-surface) 78%,
+            transparent);
+}
+
+html[data-theme="dark"] .engineering-workflow__principle-mark {
+    opacity: 0.5;
+}
+
+/* ==========================================================================
+   Engineering Toolbelt
+   ========================================================================== */
+
+.engineering-toolbelt {
+    position: relative;
+    scroll-margin-top: 7rem;
+    padding-top: clamp(var(--space-16), 8vw, var(--space-24));
+}
+
+.engineering-toolbelt__header {
+    max-width: 66rem;
+    margin-bottom: var(--space-16);
+}
+
+.engineering-toolbelt__title {
+    max-width: 26ch;
+}
+
+.engineering-toolbelt__title span {
+    display: block;
+}
+
+.engineering-toolbelt__intro {
+    max-width: 42rem;
+}
+
+.toolbelt-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(220px, 1fr));
+
+    gap:
+        clamp(var(--space-8),
+            4vw,
+            var(--space-14));
+
+}
+
+.toolbelt-group {
+
+    position: relative;
+
+    padding-bottom: var(--space-8);
+
+    border-bottom: 1px solid var(--colour-border);
+
+}
+
+.toolbelt-group h3 {
+
+    margin-bottom: var(--space-6);
+
+    font-size: 1.25rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+
+    color: var(--colour-primary);
+
+}
+
+.toolbelt-group ul {
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+}
+
+.toolbelt-group li {
+
+    position: relative;
+
+    padding-left: 1.35rem;
+
+    margin-bottom: var(--space-3);
+
+    color: var(--colour-text-muted);
+
+}
+
+.toolbelt-group li::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: .6rem;
+
+    width: .4rem;
+    height: .4rem;
+
+    border-radius: 50%;
+
+    background: var(--colour-primary);
+
+}
+
+.toolbelt-group .cg-note {
+
+    margin-top: var(--space-8);
+
+    max-width: 9rem;
+
+    font-size: 1.3rem;
+
+    line-height: 1;
+
+    transform: rotate(-2deg);
+
+}
+
+.toolbelt-group--foundations h3 {
+
+    position: relative;
+
+}
+
+.toolbelt-group--foundations h3::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -.5rem;
+
+    width: 5rem;
+    height: .35rem;
+
+    background: var(--colour-chinagraph);
+
+    transform: rotate(-1deg);
+
+}
+
+
+/* ==========================================================================
+   Engineering Toolbelt — Chinagraph Theme
+   ========================================================================== */
+.toolbelt-heading {
+    position: relative;
+    display: inline-block;
+}
+
+.cg-underline {
+    position: absolute;
+
+    left: -0.3rem;
+    top: -0.55rem;
+
+    width: 13rem;
+
+    pointer-events: none;
+}
+
+.cg-circle {
+
+    position: absolute;
+
+    left: -0.85rem;
+    top: -2.9rem;
+
+    width: 8rem;
+
+    pointer-events: none;
+
+
+}
+
+.cg-tick {
+
+    position: absolute;
+
+    right: 6.25rem;
+    top: -3.35rem;
+
+    width: 6.4rem;
+
+    pointer-events: none;
+
+}
+
+.cg-note-wrapper {
+
+    position: relative;
+    display: inline-block;
+
+    margin-top: var(--space-8);
+
+}
+
+.cg-scribble {
+
+    position: absolute;
+
+    inset: -0.5rem;
+
+    width: calc(100% + 3rem);
+    height: calc(100% + 2rem);
+
+    pointer-events: none;
+    opacity: .65;
+
+}
+
+.cg-note {
+
+    position: relative;
+    z-index: 2;
+
+}
+
+/* ==========================================================================
+   Engineering Toolbelt — Media Queries
+   ========================================================================== */
+
+@media (max-width:768px) {
+
+    .engineering-toolbelt__header {
+
+        margin-bottom: var(--space-10);
+
+    }
+
+    .toolbelt-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .toolbelt-group {
+
+        padding-bottom: var(--space-6);
+
+    }
+
+    .toolbelt-group h3 {
+
+        margin-top: 1rem;
+    }
+
+    .toolbelt-group--workflow,
+    .toolbelt-group--quality {
+
+        margin-top: 0;
+        transform: none;
+
+    }
+
+    .cg-underline {
+        top: 0.8rem;
+    }
+
+    .cg-circle {
+        top: -1.6rem;
+    }
+
+    .cg-tick {
+        top: -1.35rem;
+    }
+
+}

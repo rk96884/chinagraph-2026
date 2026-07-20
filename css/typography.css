@@ -176,3 +176,43 @@ small {
 strong {
     font-weight: var(--font-weight-semibold);
 }
+
+/* ==========================================================================
+   Handwritten annotations
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap");
+
+.cg-note {
+    margin: 0;
+
+    font-family: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+
+    color: var(--color-text-secondary);
+
+    transform: rotate(-2deg);
+}
+
+.cg-note--accent {
+    color: var(--color-chinagraph, #f5c200);
+}
+
+.cg-note--small {
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+}
+
+.cg-note--large {
+    font-size: clamp(1.7rem, 2.8vw, 2.35rem);
+}
+
+.cg-note--tilt-right {
+    transform: rotate(2deg);
+}
+
+.cg-note--no-tilt {
+    transform: none;
+}

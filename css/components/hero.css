@@ -162,6 +162,8 @@
     .hero__container {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: var(--space-8);
+        align-items: start;
     }
 
     .hero__lead {
@@ -177,8 +179,7 @@
     }
 
     .hero__visual {
-        order: -1;
-        min-height: 300px;
+        display: none;
     }
 
 }
