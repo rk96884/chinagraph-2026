@@ -8,7 +8,7 @@
 }
 
 .engineering-section {
-    padding-block: clamp(5rem, 9vw, 9rem);
+    padding-block: clamp(3rem, 2vw, 6rem);
     scroll-margin-top: 8rem;
 }
 
@@ -1441,6 +1441,179 @@ html[data-theme="dark"] .engineering-workflow__principle-mark {
 
     .cg-tick {
         top: -1.35rem;
+    }
+
+}
+
+/* ==========================================
+   Quality
+========================================== */
+
+.engineering-quality {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+
+}
+
+.quality-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+
+}
+
+.quality-item {
+
+    padding-top: var(--space-8);
+
+    border-top: 1px solid var(--color-border);
+
+}
+
+.quality-item__eyebrow {
+
+    margin-bottom: var(--space-3);
+
+    font-size: .8rem;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+    color: var(--color-text-muted);
+
+}
+
+.quality-item h3 {
+
+    margin-bottom: var(--space-4);
+
+}
+
+.quality-item p:last-child {
+
+    color: var(--color-text-secondary);
+
+}
+
+
+/* ==========================================
+   Lessons from Production
+========================================== */
+
+.engineering-lessons {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+
+}
+
+.lessons {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.lesson {
+
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: var(--space-8);
+
+    padding: var(--space-10) 0;
+
+    border-bottom: 1px solid var(--color-border);
+
+}
+
+.lesson:first-child {
+
+    border-top: 1px solid var(--color-border);
+
+}
+
+.lesson__number {
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+
+    font-weight: 300;
+
+    color: var(--color-accent);
+
+    line-height: 1;
+
+    opacity: .22;
+
+}
+
+.lesson__content h3 {
+
+    margin-bottom: var(--space-4);
+
+}
+
+.lesson__content p {
+
+    max-width: 65ch;
+
+    color: var(--color-text-secondary);
+
+}
+
+/* Notebook Note */
+
+.lessons-note {
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: var(--space-10);
+
+}
+
+.lessons-note span {
+
+    font-family: var(--font-chinagraph);
+
+    font-size: clamp(1.5rem, 3vw, 2rem);
+
+    line-height: 1.2;
+
+    transform: rotate(-2deg);
+
+    opacity: .85;
+
+}
+
+/* ==========================================================================
+   Lessons from Production — Media Queries
+   ========================================================================== */
+
+@media (max-width:768px) {
+
+    .lesson {
+
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+
+    }
+
+    .lesson__number {
+
+        font-size: 2rem;
+
+    }
+
+    .lessons-note {
+
+        justify-content: flex-start;
+
     }
 
 }
