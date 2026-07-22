@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isGitHubPages ? "/chinagraph-2026/" : "/";
 
     const underlineBasePath =
-        "${siteBasePath}images/chinagraph-library/underlines/";
+        `${siteBasePath}images/chinagraph-library/underlines/`;
 
     /* ----------------------------------------------------------------------
        Underline Library
