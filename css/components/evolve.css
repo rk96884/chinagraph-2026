@@ -1,0 +1,201 @@
+/* ==========================================================
+   Currently Evolving
+   ========================================================== */
+
+.evolving {
+    padding-block: clamp(3rem, 7vw, 4rem);
+}
+
+.evolving__panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(15rem, 0.6fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: end;
+    padding: clamp(2rem, 5vw, 5rem);
+    border: 1px solid var(--color-border, #d8d8d2);
+    background: var(--color-surface, #f5f4ef);
+    overflow: hidden;
+}
+
+/* Subtle editorial background detail */
+.evolving__panel::after {
+    content: "";
+    position: absolute;
+    right: -5rem;
+    bottom: -7rem;
+    width: 18rem;
+    aspect-ratio: 1;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.evolving__content,
+.evolving__note {
+    position: relative;
+    z-index: 1;
+}
+
+.evolving .section-title {
+    max-width: 12ch;
+    margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.evolving__copy {
+    max-width: 43rem;
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    line-height: 1.75;
+}
+
+.evolving__copy p {
+    margin: 0;
+}
+
+.evolving__copy p+p {
+    margin-top: 1rem;
+}
+
+.evolving__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.evolving__actions .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.evolving__actions .button span {
+    transition: transform 180ms ease;
+}
+
+.evolving__actions .button:hover span,
+.evolving__actions .button:focus-visible span {
+    transform: translateX(0.2rem);
+}
+
+.evolving__note {
+    max-width: 19rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-border, #c9c8c1);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.evolving__note p {
+    margin: 1rem 0 0;
+    color: var(--color-text-muted, #5f5f5a);
+}
+
+.evolving__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.evolving__status-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 8%);
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 800px) {
+    .evolving__panel {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .evolving__note {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .evolving {
+        padding-block: 4rem;
+    }
+
+    .evolving__panel {
+        gap: 2.5rem;
+        padding: 2rem 1.25rem;
+    }
+
+    .evolving__actions {
+        flex-direction: column;
+    }
+
+    .evolving__actions .button {
+        width: 100%;
+    }
+}
+
+/* ==========================================================
+   Currently Evolving (Dark Mode)
+   ========================================================== */
+
+[data-theme="dark"] .evolving__panel {
+    background: var(--color-surface, #171717);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .evolving__panel::after {
+    border-color: rgba(255, 255, 255, 0.12);
+    opacity: 0.08;
+}
+
+[data-theme="dark"] .evolving__copy {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+[data-theme="dark"] .evolving__copy p {
+    color: inherit;
+}
+
+[data-theme="dark"] .evolving__note {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .evolving__note p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+[data-theme="dark"] .evolving__status {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .evolving__status-dot {
+    background: #49d17d;
+    box-shadow: 0 0 0 4px rgba(73, 209, 125, 0.18);
+}
+
+[data-theme="dark"] .evolving__actions .button--secondary {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .evolving__actions .button--secondary:hover,
+[data-theme="dark"] .evolving__actions .button--secondary:focus-visible {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .evolving__actions .button--primary:hover,
+[data-theme="dark"] .evolving__actions .button--primary:focus-visible {
+    transform: translateY(-2px);
+}
