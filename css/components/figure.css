@@ -1,0 +1,261 @@
+/* ==========================================================
+   Figure
+========================================================== */
+
+.figure {
+    margin: 0;
+    position: relative;
+}
+
+.figure__window {
+    overflow: hidden;
+
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.figure__chrome {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+
+    min-height: 2.75rem;
+    padding-inline: 1rem;
+
+    background: var(--color-surface-subtle);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.figure__dot {
+    width: 0.65rem;
+    height: 0.65rem;
+
+    background: currentColor;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+    border-radius: 50%;
+}
+
+.figure__dot:nth-child(1) {
+    opacity: 0.45;
+}
+
+.figure__dot:nth-child(2) {
+    opacity: 0.6;
+}
+
+.figure__dot:nth-child(3) {
+    opacity: 0.75;
+}
+
+.figure__viewport {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    aspect-ratio: 16 / 10;
+    background: var(--color-surface-subtle);
+
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+    cursor: ns-resize;
+}
+
+.figure__image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+/* ==========================================================
+   Figure: Browser
+========================================================== */
+
+.figure--browser .figure__viewport {
+    aspect-ratio: 16 / 10;
+}
+
+.figure--browser {
+    width: min(100%, 72rem);
+    margin-inline: auto;
+}
+
+/* ==========================================================
+   Figure: Caption
+========================================================== */
+
+.figure__details {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: var(--space-4);
+    padding-right: var(--space-3);
+}
+
+.figure__caption {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 1rem;
+    max-width: 22rem;
+}
+
+.figure__title {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.figure__meta {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.figure__annotation {
+    position: absolute;
+
+    top: -2.5rem;
+    right: 1rem;
+
+    margin: 0;
+
+    transform: rotate(-4deg);
+
+    z-index: 2;
+}
+
+.figure__annotation span {
+    align-self: flex-start;
+
+    margin-left: 0.4rem;
+
+    font-family: var(--font-family-body);
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+/* ==========================================================
+   Figure: Mobile
+========================================================== */
+
+@media (max-width: 768px) {
+    .figure--browser .figure__viewport {
+        aspect-ratio: 4 / 3;
+    }
+
+    .figure__chrome {
+        min-height: 2.4rem;
+        padding-inline: 0.8rem;
+    }
+
+    .figure__dot {
+        width: 0.55rem;
+        height: 0.55rem;
+    }
+
+    .figure__details {
+        justify-content: flex-start;
+        padding-right: 0;
+    }
+
+    .figure__caption {
+        max-width: none;
+        text-align: left;
+    }
+
+    .figure__annotation {
+        margin-top: 3.5rem;
+        right: var(--space-2);
+    }
+}
+
+/* ==========================================================
+   Figure: Compact
+========================================================== */
+
+.figure--compact .figure__media {
+    overflow: hidden;
+
+    background: var(--color-surface-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.figure--compact .figure__image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.figure--compact:nth-child(2) .figure__media {
+    display: grid;
+    place-items: center;
+
+    padding: var(--space-8);
+}
+
+.figure--compact:nth-child(2) .figure__image {
+    width: auto;
+    max-width: 92%;
+    max-height: 38rem;
+}
+
+.figure--compact .figure__caption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+
+    max-width: 34rem;
+    margin-top: var(--space-4);
+
+    text-align: left;
+}
+
+.figure__label {
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-text-muted);
+}
+
+.figure--compact .figure__title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.figure--compact .figure__meta {
+    max-width: 48ch;
+
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+/* ==========================================================
+   Figure: Compact Mobile
+========================================================== */
+
+
+@media (max-width: 768px) {
+    .portfolio-gallery__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .portfolio-gallery__grid .figure:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .portfolio-gallery__annotation {
+        margin-right: 0;
+    }
+}
