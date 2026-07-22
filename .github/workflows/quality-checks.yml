@@ -34,15 +34,11 @@ jobs:
       - name: Check for unresolved merge markers
         shell: bash
         run: |
-          if grep -R \
+          if grep -RInE '^(<<<<<<< .+|=======|>>>>>>> .+)$' . \
             --exclude-dir=.git \
-            --exclude="*.png" \
-            --exclude="*.jpg" \
-            --exclude="*.jpeg" \
-            --exclude="*.webp" \
-            -E "^(<<<<<<<|=======|>>>>>>>)" .; then
-              echo "Unresolved merge markers found."
-              exit 1
+            --exclude-dir=node_modules; then
+            echo "Unresolved merge markers found."
+            exit 1
           fi
 
-          echo "No unresolved merge markers found."
+          echo "No unresolved merge markers found." 
