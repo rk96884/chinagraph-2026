@@ -65,6 +65,7 @@
 
 .journey {
     margin-top: var(--space-10);
+    padding-top: 0;
 }
 
 .journey-item {
