@@ -86,17 +86,14 @@
     color: var(--color-text-secondary);
 }
 
-@media (max-width: 768px) {
+.portfolio-learning__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
 
-    .featured-work,
-    .work-areas {
-        grid-template-columns: 1fr;
-    }
-
-    .featured-work {
-        gap: var(--space-8);
-    }
+    margin-top: var(--space-8);
 }
+
 
 /* ==========================================================
    Portfolio: Supporting Work
@@ -190,10 +187,30 @@
         transform: rotate(-3deg);
     }
 
+    .portfolio-learning__annotation {
+        margin: var(--space-8) 0 0 auto;
+    }
+
     .portfolio-gallery .figure--compact,
     .portfolio-gallery .figure--compact .figure__media {
         width: 100% !important;
         max-width: none !important;
         min-width: 0 !important;
+    }
+
+    .featured-work,
+    .work-areas {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-work {
+        gap: var(--space-8);
+    }
+
+    .portfolio-learning__actions {
+        flex-direction: column;
+        align-items: stretch;
+
+        margin-top: var(--space-10);
     }
 }
