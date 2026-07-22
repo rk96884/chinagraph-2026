@@ -30,9 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ----------------------------------------------------------------------
        Asset paths
     ---------------------------------------------------------------------- */
+    const isGitHubPages =
+        window.location.hostname.endsWith("github.io");
+
+    const siteBasePath =
+        isGitHubPages ? "/chinagraph-2026/" : "/";
 
     const underlineBasePath =
-        "/images/chinagraph-library/underlines/";
+        "${siteBasePath}images/chinagraph-library/underlines/";
 
     /* ----------------------------------------------------------------------
        Underline Library
