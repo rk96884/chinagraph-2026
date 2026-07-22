@@ -336,7 +336,7 @@ html[data-theme="dark"] .cg-crop {
     height: calc(100% + 2.4rem);
 
     background-image:
-        url("/images/chinagraph-library/frames/square-frame-01-medium.webp");
+        url("images/chinagraph-library/frames/square-frame-01-medium.webp");
 
     transform: rotate(-1.5deg);
 
@@ -366,7 +366,7 @@ html[data-theme="dark"] .cg-crop {
     left: -10%;
     top: -25%;
     inset: -2.5rem -3rem;
-    background-image: url("../../images/chinagraph-library/circles/circle-01-soft.webp");
+    background-image: url("../images/chinagraph-library/circles/circle-01-soft.webp");
     transform: rotate(-1.5deg);
 
     animation:
@@ -576,7 +576,7 @@ html[data-theme="dark"] .cg-pill {
     pointer-events: none;
 
     background-image:
-        url("../../images/chinagraph-library/pluses/plus-01-medium.webp");
+        url("../images/chinagraph-library/pluses/plus-01-medium.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -594,7 +594,7 @@ html[data-theme="dark"] .cg-pill {
     pointer-events: none;
 
     background-image:
-        url("../../images/chinagraph-library/ticks/tick-large-01-soft.webp");
+        url("../images/chinagraph-library/ticks/tick-large-01-soft.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
