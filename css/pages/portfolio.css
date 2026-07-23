@@ -114,8 +114,8 @@
 
 .portfolio-gallery__annotation {
     position: absolute;
-    top: -8rem;
-    left: 34rem;
+    top: 1rem;
+    left: 63rem;
     bottom: 1rem;
 
     margin: 0;
@@ -179,10 +179,11 @@
     }
 
     .portfolio-gallery__annotation {
-        position: static;
+        position: absolute;
+        left: 10px;
 
         width: fit-content;
-        margin: var(--space-8) 0 0 auto;
+        margin: 0 0 0 auto;
 
         transform: rotate(-3deg);
     }

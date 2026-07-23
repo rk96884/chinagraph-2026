@@ -409,6 +409,14 @@
             translateX(-50%) rotate(135deg);
     }
 
+    .architecture-node__tags {
+        margin: 0;
+    }
+
+    .architecture-node {
+        min-height: fit-content;
+    }
+
 }
 
 /* ==========================================================================
