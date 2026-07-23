@@ -114,12 +114,17 @@
 
 .portfolio-gallery__annotation {
     position: absolute;
-    top: 1rem;
-    left: 63rem;
+    top: -8rem;
+    left: 43rem;
     bottom: 1rem;
 
     margin: 0;
-    transform: rotate(-3deg);
+    transform: rotate(-4deg);
+}
+
+.portfolio-learning__annotation {
+    left: 32rem;
+    transform: rotate(-6deg);
 }
 
 @media (max-width: 768px) {
