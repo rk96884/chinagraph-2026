@@ -122,6 +122,12 @@
     transform: rotate(-3deg);
 }
 
+.portfolio-learning__annotation {
+    position: absolute;
+    left: 28rem;
+    margin: var(--space-8) 0 0 auto;
+}
+
 @media (max-width: 768px) {
 
     .portfolio-gallery__grid,
@@ -180,7 +186,8 @@
 
     .portfolio-gallery__annotation {
         position: static;
-
+        top: 1rem;
+        left: 1rem;
         width: fit-content;
         margin: var(--space-8) 0 0 auto;
 
@@ -188,7 +195,7 @@
     }
 
     .portfolio-learning__annotation {
-        margin: var(--space-8) 0 0 auto;
+        left: 0;
     }
 
     .portfolio-gallery .figure--compact,
