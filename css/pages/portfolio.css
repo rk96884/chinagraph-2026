@@ -115,16 +115,17 @@
 .portfolio-gallery__annotation {
     position: absolute;
     top: -8rem;
-    left: 43rem;
+    left: 34rem;
     bottom: 1rem;
 
     margin: 0;
-    transform: rotate(-4deg);
+    transform: rotate(-3deg);
 }
 
 .portfolio-learning__annotation {
-    left: 32rem;
-    transform: rotate(-6deg);
+    position: absolute;
+    left: 28rem;
+    margin: var(--space-8) 0 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -184,17 +185,17 @@
     }
 
     .portfolio-gallery__annotation {
-        position: absolute;
-        left: 10px;
-
+        position: static;
+        top: 1rem;
+        left: 1rem;
         width: fit-content;
-        margin: 0 0 0 auto;
+        margin: var(--space-8) 0 0 auto;
 
         transform: rotate(-3deg);
     }
 
     .portfolio-learning__annotation {
-        margin: var(--space-8) 0 0 auto;
+        left: 0;
     }
 
     .portfolio-gallery .figure--compact,
@@ -218,5 +219,179 @@
         align-items: stretch;
 
         margin-top: var(--space-10);
+    }
+}
+
+/* Work History */
+
+.work-history {
+    padding-block: clamp(4rem, 3vw, 7rem);
+}
+
+.work-history__intro {
+    max-width: 44rem;
+    margin-bottom: 3rem;
+}
+
+.timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 3rem;
+}
+
+.timeline::before {
+    position: absolute;
+    top: 3.25rem;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background: var(--color-border, #c9c9c9);
+    content: "";
+}
+
+.timeline__item {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 0.65rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+}
+
+.timeline__year {
+    min-height: 2rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.timeline__marker {
+    z-index: 1;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 3px solid var(--color-background, #fff);
+    border-radius: 50%;
+    background: var(--color-muted, #8a8a8a);
+    outline: 2px solid var(--color-muted, #8a8a8a);
+    transition:
+        background-color 180ms ease,
+        outline-color 180ms ease,
+        transform 180ms ease;
+}
+
+.timeline__label {
+    font-weight: 600;
+}
+
+.timeline__item:hover .timeline__marker,
+.timeline__item:focus-visible .timeline__marker {
+    transform: scale(1.2);
+}
+
+.timeline__item.is-active .timeline__marker {
+    background: var(--color-accent, #f5c400);
+    outline-color: var(--color-accent, #f5c400);
+    transform: scale(1.25);
+}
+
+.timeline__item.is-active .timeline__label {
+    color: var(--color-accent-dark, #765f00);
+}
+
+.timeline__item:focus-visible {
+    border-radius: 0.25rem;
+    outline: 3px solid currentColor;
+    outline-offset: 0.5rem;
+}
+
+.timeline-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+    padding-block: 2rem;
+    border-top: 1px solid var(--color-border, #d7d7d7);
+    border-bottom: 1px solid var(--color-border, #d7d7d7);
+}
+
+.timeline-panel__image {
+    overflow: hidden;
+    border: 1px solid var(--color-border, #d7d7d7);
+    background: #f3f3f3;
+}
+
+.timeline-panel__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+}
+
+.timeline-panel__year {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.timeline-panel__company {
+    margin-top: -0.5rem;
+    color: var(--color-text-muted, #666);
+}
+
+.timeline-panel__technologies {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Mobile: convert the timeline into a vertical journey */
+@media (max-width: 700px) {
+    .timeline {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-left: 0.5rem;
+    }
+
+    .timeline::before {
+        top: 0;
+        bottom: 0;
+        left: 0.55rem;
+        width: 2px;
+        height: auto;
+    }
+
+    .timeline__item {
+        grid-template-columns: 1.1rem 6.5rem 1fr;
+        justify-items: start;
+        align-items: center;
+        gap: 1rem;
+        min-height: 4.5rem;
+        text-align: left;
+    }
+
+    .timeline__marker {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .timeline__year {
+        grid-column: 2;
+        min-height: auto;
+    }
+
+    .timeline__label {
+        grid-column: 3;
+    }
+
+    .timeline-panel {
+        grid-template-columns: 1fr;
     }
 }

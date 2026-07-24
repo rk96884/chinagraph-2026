@@ -471,6 +471,101 @@
 
         </div>
     </section>
+    <section class="work-history" aria-labelledby="work-history-title">
+        <div class="container">
+            <p class="section-eyebrow">From the archive</p>
+
+            <h2 id="work-history-title" class="section-title section-title--chinagraph">
+                <span class="section-title__marked-text">A journey through</span> my work
+            </h2>
+
+            <p class="work-history__intro">
+                A selection of websites, intranets and digital experiences that reflect
+                how my work has evolved over more than 20 years.
+            </p>
+
+            <div class="timeline" role="tablist" aria-label="Career and project timeline">
+                <button class="timeline__item is-active" type="button" role="tab" aria-selected="true"
+                    aria-controls="timeline-panel" data-year="1999–2007" data-title="Early web development"
+                    data-company="Entranet and Exchange Systems"
+                    data-description="My early commercial work included company websites, creative intranets and browser-based experiences built with HTML, CSS and JavaScript."
+                    data-technologies="HTML, CSS, JavaScript, Photoshop" data-image="../images/portfolio/accucard.gif"
+                    data-alt="Screenshot of an early portfolio project featuring a creative company intranet">
+                    <span class="timeline__year">1999–2007</span>
+                    <span class="timeline__marker" aria-hidden="true"></span>
+                    <span class="timeline__label">Early web</span>
+                </button>
+
+                <button class="timeline__item" type="button" role="tab" aria-selected="false"
+                    aria-controls="timeline-panel" data-year="2007–2013" data-title="Global financial platforms"
+                    data-company="Citigroup"
+                    data-description="I developed and maintained internal web experiences for global audiences, working with stakeholders across business and technology teams."
+                    data-technologies="HTML, CSS, JavaScript, jQuery, CMS"
+                    data-image="../images/portfolio/ipb-citigroup.png"
+                    data-alt="Example of web development work produced during my time at Citigroup">
+                    <span class="timeline__year">2007–2013</span>
+                    <span class="timeline__marker" aria-hidden="true"></span>
+                    <span class="timeline__label">Citigroup</span>
+                </button>
+
+                <button class="timeline__item" type="button" role="tab" aria-selected="false"
+                    aria-controls="timeline-panel" data-year="2013–2026"
+                    data-title="Event websites and digital experiences" data-company="JPMorgan Chase"
+                    data-description="I delivered responsive event websites and attendee experiences for global audiences, with a strong focus on accessibility, usability and reliable delivery."
+                    data-technologies="HTML, CSS, Bootstrap, JavaScript, jQuery, CMS, Git, GitHub, WCAG"
+                    data-image="../images/portfolio/jpmorgan.png"
+                    data-alt="Representative example of an event website project">
+                    <span class="timeline__year">2013–2026</span>
+                    <span class="timeline__marker" aria-hidden="true"></span>
+                    <span class="timeline__label">JPMorgan</span>
+                </button>
+
+                <button class="timeline__item" type="button" role="tab" aria-selected="false"
+                    aria-controls="timeline-panel" data-year="2026" data-title="CHINAGRAPH"
+                    data-company="Personal portfolio"
+                    data-description="A complete rebuild of my professional portfolio, combining responsive design, accessible frontend development, personal branding and modern Git workflows."
+                    data-technologies="HTML, CSS, JavaScript, Git, GitHub, AI-assisted development"
+                    data-image="../images/portfolio/chinagraph-website-cv.png"
+                    data-alt="Screenshot of the modern CHINAGRAPH portfolio website">
+                    <span class="timeline__year">2026</span>
+                    <span class="timeline__marker" aria-hidden="true"></span>
+                    <span class="timeline__label">CHINAGRAPH</span>
+                </button>
+            </div>
+
+            <article class="timeline-panel" id="timeline-panel" role="tabpanel" aria-live="polite">
+                <div class="timeline-panel__image">
+                    <img id="timeline-image" src="../images/portfolio/creative_intranet.gif"
+                        alt="Screenshot of an early portfolio project featuring a creative company intranet">
+                </div>
+
+                <div class="timeline-panel__content">
+                    <p class="timeline-panel__year" id="timeline-year">
+                        1999–2007
+                    </p>
+
+                    <h3 id="timeline-title">Early web development</h3>
+
+                    <p class="timeline-panel__company" id="timeline-company">
+                        Entranet and Exchange Systems
+                    </p>
+
+                    <p id="timeline-description">
+                        My early commercial work included company websites, creative
+                        intranets and browser-based experiences built with HTML, CSS and
+                        JavaScript.
+                    </p>
+
+                    <p class="timeline-panel__technologies">
+                        <strong>Tools and technologies:</strong>
+                        <span id="timeline-technologies">
+                            HTML, CSS, JavaScript, Photoshop
+                        </span>
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
 
     <footer class="site-footer">
 
@@ -502,6 +597,8 @@
     <script src="../js/chinagraph-authentic-marks.js" defer>
     </script>
     <script src="../js/navigation.js" defer>
+    </script>
+    <script src="../js/main.js" defer>
     </script>
 
 
