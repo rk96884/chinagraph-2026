@@ -511,10 +511,10 @@ html[data-theme="dark"] .engineering-hero::before {
 .engineering-principles__note {
     position: absolute;
     top: clamp(9.5rem, 14vw, 13rem);
-    right: -36rem;
+    right: -46rem;
     margin: 0;
     color: var(--color-primary);
-    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+    font-size: clamp(0.9rem, 1.3vw, 2.05rem);
     font-weight: 600;
     line-height: 1.45;
     transform: rotate(3deg);
@@ -1597,6 +1597,11 @@ html[data-theme="dark"] .engineering-workflow__principle-mark {
 
 @media (max-width:768px) {
 
+    .quality-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
     .lesson {
 
         grid-template-columns: 1fr;
@@ -1616,4 +1621,122 @@ html[data-theme="dark"] .engineering-workflow__principle-mark {
 
     }
 
+}
+
+/* ==========================================================================
+    Continuous learning 
+  ========================================================================== */
+
+.continuous-learning {
+    padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.continuous-learning__header {
+    max-width: 52rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.continuous-learning__intro {
+    max-width: 46rem;
+    margin-top: 1.5rem;
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+}
+
+.continuous-learning__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 1.1fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+}
+
+.continuous-learning__content {
+    max-width: 40rem;
+}
+
+.continuous-learning__content p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.75;
+}
+
+.learning-panel {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-top: 4px solid var(--color-accent, #f5c400);
+    background: var(--color-surface, #f5f5f5);
+}
+
+.learning-panel__eyebrow {
+    margin: 0 0 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.learning-panel h3 {
+    margin: 0 0 2rem;
+    font-size: clamp(1.5rem, 3vw, 2.15rem);
+    line-height: 1.1;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.learning-grid li {
+    position: relative;
+    padding: 1rem 1rem 1rem 1.5rem;
+    border-top: 1px solid var(--color-border, #d4d4d4);
+    line-height: 1.4;
+}
+
+.learning-grid li::before {
+    position: absolute;
+    top: 1.45rem;
+    left: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--color-accent, #f5c400);
+    content: "";
+    transform: rotate(45deg);
+}
+
+.learning-grid li:nth-child(odd) {
+    margin-right: 1.25rem;
+}
+
+
+@media (max-width: 800px) {
+    .continuous-learning__layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .learning-panel {
+        padding: 1.5rem;
+    }
+
+    .continous-learning__annotation {
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-grid li:nth-child(odd) {
+        margin-right: 0;
+    }
+
+    .learning-quote p {
+        letter-spacing: -0.025em;
+    }
 }
