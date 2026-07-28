@@ -29,7 +29,7 @@
 .hero__eyebrow {
     display: inline-block;
     margin-bottom: var(--space-4);
-    color: var(--colour-accent);
+    color: var(--colour-text-muted);
     font-weight: 600;
     letter-spacing: .08em;
     text-transform: uppercase;
