@@ -97,6 +97,11 @@
     gap: 2rem;
 }
 
+.engineering-cta__actions {
+    display: flex;
+    gap: 2rem;
+}
+
 /* ==========================================================================
    Engineering Hero Checklist
    ========================================================================== */
@@ -255,6 +260,16 @@
     .engineering-hero__checklist {
         max-width: 42rem;
         margin-inline: auto;
+    }
+
+    .engineering-cta__actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .engineering-cta__actions .button {
+        justify-content: center;
+        width: 100%;
     }
 
 }
@@ -1544,7 +1559,7 @@ html[data-theme="dark"] .engineering-workflow__principle-mark {
 
     font-weight: 300;
 
-    color: var(--color-accent);
+    color: var(--color-accent-dark);
 
     line-height: 1;
 

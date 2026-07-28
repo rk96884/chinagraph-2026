@@ -57,7 +57,7 @@
     font-weight: var(--font-weight-bold);
     line-height: 1;
 
-    color: var(--colour-border);
+    color: var(--colour-decorative-number);
 
     pointer-events: none;
     user-select: none;
