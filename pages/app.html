@@ -8,7 +8,7 @@
     <title>App | Rishi Khosla | CHINAGRAPH</title>
 
     <meta name="description"
-        content="Discover the Football Tournament Manager, a React and ASP.NET Core application featuring live fixtures, results, league tables and tournament management with a responsive user experience.">
+        content="Discover the Football Tournament Manager, a Vite-powered React and ASP.NET Core application featuring live fixtures, results, league tables and tournament management with a responsive user experience.">
 
     <meta name="theme-color" content="#121212">
 
@@ -24,7 +24,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css?v=20260807-layout">
 
     <script src="../js/theme.js" defer></script>
 </head>
@@ -144,6 +144,7 @@
                     <ul class="pill-list" aria-label="Technologies used">
 
                         <li class="cg-pill">React</li>
+                        <li class="cg-pill">Vite</li>
                         <li class="cg-pill">JavaScript</li>
                         <li class="cg-pill">ASP.NET Core</li>
                         <li class="cg-pill">Entity Framework Core</li>
@@ -173,7 +174,7 @@
                     <div class="app-hero__blob"></div>
                     <div class="app-hero__image-frame">
 
-                        <img class="app-hero__image" src="../images/projects/football-tournament-manager-fixtures.png"
+                        <img class="app-hero__image" src="../images/projects/football-tournament-manager-fixtures.png?v=20260807"
                             alt="Football Tournament Manager interface showing tournament information and fixtures"
                             width="599" height="494">
                     </div>
@@ -470,7 +471,7 @@
                     </p>
 
                     <p>
-                        The React interface communicates with an ASP.NET Core REST
+                        The React interface, developed and built with Vite, communicates with an ASP.NET Core REST
                         API, which handles application logic and data operations.
                         Entity Framework Core provides the connection between the
                         API and the SQLite database.
@@ -525,12 +526,13 @@
                         </p>
 
                         <h3 class="architecture-node__title">
-                            React
+                            React + Vite
                         </h3>
 
                         <p class="architecture-node__description">
-                            Handles reusable components, routing, application state
-                            and the responsive user interface.
+                            React handles reusable components, routing, application state
+                            and the responsive user interface, while Vite provides the
+                            development server and production build tooling.
                         </p>
 
                         <ul class="architecture-node__tags" aria-label="React responsibilities">
@@ -538,6 +540,7 @@
                             <li>Routing</li>
                             <li>State</li>
                             <li>Responsive UI</li>
+                            <li>Vite tooling</li>
                         </ul>
 
                     </article>
@@ -605,7 +608,8 @@
                             database operations.
                         </p>
 
-                        <ul class="architecture-node__tags" aria-label="Entity Framework responsibilities">
+                        <ul class="architecture-node__tags architecture-node__tags--stacked"
+                            aria-label="Entity Framework responsibilities">
                             <li>Models</li>
                             <li>Queries</li>
                             <li>Relationships</li>
@@ -711,9 +715,9 @@
 
                             <div class="app-feature__crop">
 
-                                <img src="../images/projects/football-tournament-manager-edit-page.png"
-                                    alt="Tournament Manager interface showing a list of tournaments" width="609"
-                                    height="748" loading="lazy">
+                                <img src="../images/projects/football-tournament-manager-edit-page.png?v=20260807"
+                                    alt="Tournament Manager interface showing a list of tournaments" width="1265"
+                                    height="712" loading="lazy">
 
                             </div>
 
@@ -757,9 +761,9 @@
 
                             <div class="app-feature__crop">
 
-                                <img src="../images/projects/football-tournament-manager-edit-team.png"
+                                <img src="../images/projects/football-tournament-manager-edit-team.png?v=20260807"
                                     alt="Tournament Manager interface showing add and edit team functionality"
-                                    width="612" height="727" loading="lazy">
+                                    width="1280" height="720" loading="lazy">
 
                             </div>
 
@@ -802,9 +806,9 @@
 
                             <div class="app-feature__crop">
 
-                                <img src="../images/projects/football-tournament-manager-fixtures-cropped.png"
-                                    alt="Tournament Manager interface showing fixture information" width="595"
-                                    height="708" loading="lazy">
+                                <img src="../images/projects/football-tournament-manager-fixtures-cropped.png?v=20260807"
+                                    alt="Tournament Manager interface showing fixture information" width="1265"
+                                    height="712" loading="lazy">
 
                             </div>
 
@@ -848,9 +852,9 @@
 
                             <div class="app-feature__crop">
 
-                                <img src="../images/projects/football-tournament-manager-payments.png"
-                                    alt="Tournament Manager interface showing payment information" width="781"
-                                    height="588" loading="lazy">
+                                <img src="../images/projects/football-tournament-manager-payments.png?v=20260807"
+                                    alt="Tournament Manager interface showing payment information" width="1265"
+                                    height="712" loading="lazy">
 
                             </div>
 
@@ -918,12 +922,12 @@
                                 </p>
 
                                 <h3 class="decision__title">
-                                    React
+                                    React with Vite
                                 </h3>
 
                                 <p class="decision__summary">
                                     Building the interface from focused, reusable
-                                    components.
+                                    components with a fast modern toolchain.
                                 </p>
 
                             </header>
@@ -941,6 +945,8 @@
                                     </p>
 
                                     <p>
+                                        Vite provides a fast development server, efficient
+                                        module handling and an optimised production build.
                                         As the application grows, this structure makes
                                         features easier to maintain and extend without
                                         duplicating layout, state or behaviour.
@@ -958,7 +964,8 @@
                                             <li>Reusable interface components</li>
                                             <li>Clear component hierarchy</li>
                                             <li>Predictable state-driven rendering</li>
-                                            <li>Strong development ecosystem</li>
+                                            <li>Fast Vite development workflow</li>
+                                            <li>Optimised production builds</li>
                                         </ul>
 
                                     </div>
@@ -1288,7 +1295,7 @@
                                     <h4>Why this choice?</h4>
 
                                     <p>
-                                        The React client and ASP.NET Core API are
+                                        The Vite-built React client and ASP.NET Core API are
                                         deployed separately, reflecting the separation
                                         already established within the architecture.
                                     </p>

@@ -94,6 +94,25 @@
     margin-top: var(--space-8);
 }
 
+.portfolio-learning__screenshots {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+
+    margin-top: var(--space-12);
+}
+
+.portfolio-learning__screenshots .figure,
+.portfolio-learning__screenshots .figure__media,
+.portfolio-learning__screenshots .figure__image {
+    width: 100%;
+    min-width: 0;
+}
+
+.portfolio-learning__screenshots .figure__image {
+    height: auto;
+}
+
 
 /* ==========================================================
    Portfolio: Supporting Work
@@ -129,6 +148,11 @@
 }
 
 @media (max-width: 768px) {
+
+    .portfolio-learning__screenshots {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--space-8);
+    }
 
     .portfolio-gallery__grid,
     .portfolio-gallery__grid .figure {
