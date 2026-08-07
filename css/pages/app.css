@@ -306,6 +306,12 @@
     margin-top: 0;
 }
 
+.architecture-node__tags--stacked {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
 /* ==========================================================================
    Architecture Connector
    ========================================================================== */
@@ -557,7 +563,7 @@ html[data-theme="dark"] .architecture-connector__label {
 
 .app-feature__crop {
     position: relative;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border: 1px solid rgb(25 35 70 / 0.07);
     border-radius: 1.4rem;
@@ -569,10 +575,13 @@ html[data-theme="dark"] .architecture-connector__label {
 
 .app-feature__crop img {
     position: absolute;
+    inset: 0;
     display: block;
-    width: auto;
-    max-width: none;
-    height: auto;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
 }
 
 .app-feature__media figcaption {
@@ -588,29 +597,21 @@ html[data-theme="dark"] .architecture-connector__label {
 /* Tournament list */
 .app-feature__media--tournaments img {
     width: 100%;
-    top: -22%;
-    left: 0%;
 }
 
 /* Team information */
 .app-feature__media--teams img {
     width: 100%;
-    top: -18%;
-    left: 0%;
 }
 
 /* Fixtures */
 .app-feature__media--fixtures img {
     width: 100%;
-    top: -35%;
-    left: 0%;
 }
 
 /* Payments */
 .app-feature__media--payments img {
-    width: 128%;
-    top: 0%;
-    left: -28%;
+    width: 100%;
 }
 
 .app-feature__media::after {
@@ -683,7 +684,7 @@ html[data-theme="dark"] .architecture-connector__label {
     }
 
     .app-feature__crop {
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 16 / 9;
         border-radius: 1rem;
     }
 
