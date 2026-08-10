@@ -9,10 +9,70 @@
 
     <meta name="description"
         content="A portfolio 25 years in the making. Front-End Developer specialising in accessible, responsive web applications and modern front-end engineering.">
+    <link rel="canonical" href="https://rk96884.github.io/chinagraph-2026/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CHINAGRAPH">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="CHINAGRAPH | Rishi Khosla | Front-End Developer">
+    <meta property="og:description"
+        content="A portfolio 25 years in the making, focused on accessible, responsive web applications and thoughtful front-end engineering.">
+    <meta property="og:url" content="https://rk96884.github.io/chinagraph-2026/">
+    <meta property="og:image"
+        content="https://rk96884.github.io/chinagraph-2026/images/social/chinagraph-social-card.png">
+    <meta property="og:image:width" content="1731">
+    <meta property="og:image:height" content="909">
+    <meta property="og:image:alt" content="CHINAGRAPH — A portfolio 25 years in the making, by Rishi Khosla">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CHINAGRAPH | Rishi Khosla | Front-End Developer">
+    <meta name="twitter:description"
+        content="A portfolio 25 years in the making, focused on accessible, responsive web applications and thoughtful front-end engineering.">
+    <meta name="twitter:image"
+        content="https://rk96884.github.io/chinagraph-2026/images/social/chinagraph-social-card.png">
+    <meta name="twitter:image:alt" content="CHINAGRAPH — A portfolio 25 years in the making, by Rishi Khosla">
 
     <meta name="author" content="Rishi Khosla">
 
     <meta name="theme-color" content="#121212">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "@id": "https://rk96884.github.io/chinagraph-2026/#person",
+                    "name": "Rishi Khosla",
+                    "url": "https://rk96884.github.io/chinagraph-2026/",
+                    "image": "https://rk96884.github.io/chinagraph-2026/images/social/chinagraph-social-card.png",
+                    "jobTitle": "Front-End Developer",
+                    "sameAs": [
+                        "https://github.com/rk96884",
+                        "https://www.linkedin.com/in/rishi-khosla-83473998/"
+                    ],
+                    "knowsAbout": [
+                        "Accessible web development",
+                        "Responsive web design",
+                        "Front-end engineering",
+                        "JavaScript",
+                        "React"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://rk96884.github.io/chinagraph-2026/#website",
+                    "url": "https://rk96884.github.io/chinagraph-2026/",
+                    "name": "CHINAGRAPH",
+                    "description": "A portfolio 25 years in the making.",
+                    "inLanguage": "en-GB",
+                    "creator": {
+                        "@id": "https://rk96884.github.io/chinagraph-2026/#person"
+                    }
+                }
+            ]
+        }
+    </script>
 
     <link rel="icon" href="favicon/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32x32.png">
@@ -21,12 +81,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"></noscript>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/generated/home.min.css?v=20260810-home-performance">
 </head>
 
 <body>
@@ -40,7 +102,7 @@
         <div class="container">
 
             <nav class="site-nav" aria-label="Primary">
-                <a class="site-logo" href="index.html" aria-label="CHINAGRAPH home">
+                <a class="site-logo" href="index.html">
 
                     <span class="cg-crop cg-crop--logo" aria-hidden="true">
                     </span>
@@ -52,6 +114,7 @@
                     <span class="site-logo__tagline">
                         A portfolio 25 years in the making.
                     </span>
+                    <span class="visually-hidden">Home</span>
                 </a>
                 <div class="nav-actions">
                     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
@@ -182,25 +245,14 @@
 
                 </div>
 
-                <div class="hero__visual">
-
-                    <div class="hero__year" aria-hidden="true">
-                        1999
-                    </div>
-
-                    <div class="hero__image-placeholder" aria-hidden="true">
-                        <div>
-
-                            <strong>CHINAGRAPH</strong>
-
-                            <p>Original artwork arriving soon</p>
-
-                        </div>
-                        <!-- Chinagraph artwork will go here -->
-
-                    </div>
-
-                </div>
+                <figure class="hero__archive">
+                    <img src="images/hero/chinagraph-1999.webp" width="795" height="486"
+                        alt="Original Chinagraph portfolio homepage from 1999" fetchpriority="high" decoding="async">
+                    <figcaption class="hero__archive-caption">
+                        <span>CHINAGRAPH, 1999</span>
+                        <span>The original portfolio.</span>
+                    </figcaption>
+                </figure>
 
             </div>
             <div class="hero__scroll">
@@ -463,12 +515,18 @@
                         <div class="project__screenshots">
                             <img class="project__screenshot project__screenshot--primary"
                                 src="images/projects/football-tournament-manager-fixtures.png?v=20260807"
+                                width="1265" height="712"
+                                loading="lazy" decoding="async"
                                 alt="Football Tournament Manager interface showing tournament information and fixtures">
                             <img class="project__screenshot"
                                 src="images/projects/football-tournament-manager-edit-team.png?v=20260807"
+                                width="1280" height="720"
+                                loading="lazy" decoding="async"
                                 alt="Football Tournament Manager interface for adding and editing a team">
                             <img class="project__screenshot"
                                 src="images/projects/football-tournament-manager-payments.png?v=20260807"
+                                width="1265" height="712"
+                                loading="lazy" decoding="async"
                                 alt="Football Tournament Manager interface showing player payment information">
                         </div>
                         <figcaption class="project__caption">
@@ -547,14 +605,14 @@
                         <div class="project__actions">
 
                             <a href="https://rk96884.github.io/Football-Tournament-frontend/" class="button"
-                                target="_blank">
+                                target="_blank" rel="noopener noreferrer">
 
                                 Launch Application <span aria-hidden="true">→</span>
 
                             </a>
 
                             <a href="https://github.com/rk96884/Football-Tournament-frontend"
-                                class="button button--secondary" target="_blank">
+                                class="button button--secondary" target="_blank" rel="noopener noreferrer">
 
                                 View Source on GitHub <span aria-hidden="true">↗</span>
 
@@ -1001,11 +1059,10 @@
 
     </footer>
 
-    <script src="js/main.js" defer></script>
-    <script src="js/theme.js" defer></script>
-    <script src="js/navigation.js" defer>
+    <script src="js/generated/theme.min.js?v=20260810-performance" defer></script>
+    <script src="js/generated/navigation.min.js?v=20260810-performance" defer>
     </script>
-    <script src="js/chinagraph-authentic-marks.js" defer></script>
+    <script src="js/generated/chinagraph-authentic-marks.min.js?v=20260810-performance" defer></script>
 
 </body>
 

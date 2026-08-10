@@ -16,6 +16,466 @@
     margin-bottom: var(--space-8);
 }
 
+/* ==========================================================================
+   Lessons learned — engineering ledger
+   ========================================================================== */
+
+.app-lessons {
+    padding-block: clamp(var(--space-16), 8vw, var(--space-24));
+    border-block: 1px solid var(--colour-border);
+    background-color: var(--colour-surface-subtle);
+}
+
+.app-lessons > .container {
+    display: grid;
+    grid-template-columns: minmax(15rem, .65fr) minmax(0, 1.35fr);
+    gap: clamp(var(--space-10), 7vw, var(--space-20));
+    align-items: start;
+}
+
+.app-lessons .app-section__header {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-8));
+    margin: 0;
+}
+
+.app-lessons__content {
+    min-width: 0;
+}
+
+.app-lessons .app-section__lead {
+    max-width: 47rem;
+    margin-bottom: var(--space-12);
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    line-height: 1.75;
+}
+
+.app-lessons .app-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-12) var(--space-8);
+    counter-reset: lesson;
+}
+
+.app-lessons .app-card {
+    position: relative;
+    min-height: 12rem;
+    padding: var(--space-10) var(--space-6) var(--space-6) 0;
+    border-top: 1px solid var(--colour-border);
+    counter-increment: lesson;
+}
+
+.app-lessons .app-card::before {
+    position: absolute;
+    top: var(--space-3);
+    left: 0;
+    color: var(--colour-primary);
+    content: "0" counter(lesson);
+    font-family: var(--font-heading);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: .12em;
+}
+
+.app-lessons .app-card:nth-of-type(even):not(:last-child) {
+    transform: translateY(var(--space-8));
+}
+
+.app-lessons .app-card h3 {
+    margin-bottom: var(--space-4);
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+}
+
+.app-lessons .app-card p {
+    margin: 0;
+}
+
+.app-lessons .app-card:last-child {
+    grid-column: 1 / -1;
+    min-height: 0;
+    padding-right: clamp(var(--space-6), 8vw, var(--space-20));
+    border-top-color: var(--colour-primary);
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--colour-primary) 8%, transparent), transparent 70%);
+}
+
+.app-lessons__annotation {
+    align-self: center;
+    justify-self: center;
+    margin: var(--space-8) 0 0;
+    color: var(--colour-text-secondary);
+    transform: rotate(-3deg);
+}
+
+.app-lessons__annotation::after {
+    display: block;
+    width: 8rem;
+    height: .45rem;
+    margin-top: var(--space-2);
+    background-color: var(--colour-chinagraph);
+    content: "";
+    transform: rotate(-1deg);
+}
+
+/* ==========================================================================
+   Accessibility — proof sheet
+   ========================================================================== */
+
+.app-accessibility {
+    padding-block: clamp(var(--space-16), 8vw, var(--space-24));
+}
+
+.app-accessibility .app-section__header {
+    max-width: 60rem;
+    margin-bottom: var(--space-12);
+}
+
+.app-accessibility__layout {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(28rem, 1.1fr);
+    gap: clamp(var(--space-10), 7vw, var(--space-20));
+    align-items: start;
+}
+
+.app-accessibility__content {
+    max-width: 42rem;
+}
+
+.app-accessibility__content .app-section__lead {
+    color: var(--colour-text);
+    font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+    line-height: 1.7;
+}
+
+.app-accessibility__proof {
+    position: relative;
+    padding: clamp(var(--space-6), 4vw, var(--space-10));
+    border: 1px solid var(--colour-border);
+    background-color: var(--colour-surface-subtle);
+}
+
+.app-accessibility__proof-title {
+    margin-bottom: var(--space-6);
+    color: var(--colour-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.app-checklist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.app-checklist li {
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 1fr) auto;
+    gap: var(--space-3);
+    align-items: center;
+    margin: 0;
+    padding: var(--space-4) var(--space-3);
+    border-top: 1px solid var(--colour-border);
+    color: var(--colour-text);
+}
+
+.app-checklist li:last-child {
+    border-bottom: 1px solid var(--colour-border);
+}
+
+.app-checklist__number {
+    color: var(--colour-primary);
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: .1em;
+}
+
+.app-checklist__status {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--colour-success);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.app-checklist__status > span {
+    display: grid;
+    place-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+[data-theme="dark"] .app-checklist__status {
+    color: #49d17d;
+}
+
+.app-checklist__item--focus {
+    position: relative;
+    z-index: 1;
+    outline: 3px solid var(--colour-primary);
+    outline-offset: 3px;
+    background-color: var(--colour-surface);
+}
+
+.app-accessibility__annotation {
+    width: fit-content;
+    margin: var(--space-8) var(--space-4) 0 auto;
+    color: var(--colour-text-secondary);
+    transform: rotate(-3deg);
+}
+
+.app-accessibility__annotation::after {
+    display: block;
+    width: 9rem;
+    height: .45rem;
+    margin-top: var(--space-2);
+    background-color: var(--colour-chinagraph);
+    content: "";
+    transform: rotate(1deg);
+}
+
+/* ==========================================================================
+   Design goals — touchline playbook
+   ========================================================================== */
+
+.app-goals {
+    padding-block: clamp(var(--space-16), 8vw, var(--space-24));
+    background-color: var(--colour-surface-subtle);
+}
+
+.app-goals > .container {
+    display: grid;
+    grid-template-columns: minmax(17rem, .8fr) minmax(32rem, 1.2fr);
+    gap: var(--space-8) clamp(var(--space-10), 7vw, var(--space-20));
+    align-items: start;
+}
+
+.app-goals .app-section__header {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-8));
+    margin: 0;
+}
+
+.app-goals .app-section__intro {
+    max-width: 38rem;
+    margin-top: var(--space-6);
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+}
+
+.app-goals .app-card-grid {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--colour-success) 34%, var(--colour-border));
+    background-color: var(--colour-surface);
+    counter-reset: goal;
+}
+
+.app-goals .app-card-grid::before,
+.app-goals .app-card-grid::after {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    content: "";
+}
+
+.app-goals .app-card-grid::before {
+    inset: 50% 0 auto;
+    border-top: 1px solid color-mix(in srgb, var(--colour-success) 24%, var(--colour-border));
+    box-shadow: 0 -100vh 0 -100vh transparent;
+}
+
+.app-goals .app-card-grid::after {
+    top: 50%;
+    left: 50%;
+    width: clamp(7rem, 14vw, 10rem);
+    aspect-ratio: 1;
+    border: 1px solid color-mix(in srgb, var(--colour-success) 28%, var(--colour-border));
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.app-goals .app-card {
+    position: relative;
+    z-index: 1;
+    min-height: 15rem;
+    padding: clamp(var(--space-6), 4vw, var(--space-10));
+    counter-increment: goal;
+}
+
+.app-goals .app-card:nth-child(odd) {
+    border-right: 1px solid color-mix(in srgb, var(--colour-success) 24%, var(--colour-border));
+}
+
+.app-goals .app-card::before {
+    display: block;
+    margin-bottom: var(--space-6);
+    color: var(--colour-primary);
+    content: "0" counter(goal);
+    font-family: var(--font-heading);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: .12em;
+}
+
+.app-goals .app-card__title {
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    margin-bottom: var(--space-4);
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+.app-goals .app-card:first-child .app-card__title::after {
+    position: absolute;
+    z-index: -1;
+    right: -.5rem;
+    bottom: .05em;
+    left: -.35rem;
+    height: .55em;
+    background-color: color-mix(in srgb, var(--colour-chinagraph) 68%, transparent);
+    content: "";
+    transform: rotate(-1deg);
+}
+
+.app-goals .app-card p {
+    margin: 0;
+}
+
+.app-goals__annotation {
+    grid-column: 2;
+    justify-self: end;
+    width: fit-content;
+    margin: var(--space-4) var(--space-6) 0 0;
+    color: var(--colour-text-secondary);
+    transform: rotate(-3deg);
+}
+
+.app-goals__annotation::after {
+    display: block;
+    width: 10rem;
+    height: .45rem;
+    margin-top: var(--space-2);
+    background-color: var(--colour-chinagraph);
+    content: "";
+    transform: rotate(-1deg);
+}
+
+@media (max-width: 900px) {
+
+    .app-goals > .container {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .app-goals .app-section__header {
+        position: static;
+    }
+
+    .app-goals__annotation {
+        grid-column: 1;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .app-goals .app-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-goals .app-card-grid::before,
+    .app-goals .app-card-grid::after {
+        display: none;
+    }
+
+    .app-goals .app-card {
+        min-height: 0;
+        border-top: 1px solid var(--colour-border);
+    }
+
+    .app-goals .app-card:first-child {
+        border-top: 0;
+    }
+
+    .app-goals .app-card:nth-child(odd) {
+        border-right: 0;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .app-accessibility__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .app-accessibility__content {
+        max-width: 48rem;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .app-checklist li {
+        grid-template-columns: 2rem minmax(0, 1fr);
+    }
+
+    .app-checklist__status {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .app-lessons > .container {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .app-lessons .app-section__header {
+        position: static;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .app-lessons .app-card-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .app-lessons .app-card:nth-of-type(even):not(:last-child) {
+        transform: none;
+    }
+
+    .app-lessons .app-card:last-child,
+    .app-lessons__annotation {
+        grid-column: 1;
+    }
+
+    .app-lessons__annotation {
+        justify-self: end;
+        margin: 0 var(--space-4) var(--space-4) 0;
+    }
+
+}
+
 .app-cta {
     padding-block:
         clamp(4rem, 7vw, 6rem) clamp(6rem, 9vw, 8rem);
@@ -417,6 +877,12 @@
 
     .architecture-node__tags {
         margin: 0;
+    }
+
+    .architecture-node__tags--stacked {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     .architecture-node {

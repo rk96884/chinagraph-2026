@@ -4,6 +4,7 @@ Thumbs.db
 .vscode/settings.json
 
 node_modules
+.pnpm-store
 
 dist
 

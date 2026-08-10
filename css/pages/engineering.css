@@ -1220,9 +1220,7 @@ html[data-theme="dark"] .engineering-workflow__principle-mark {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(auto-fit,
-            minmax(220px, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 
     gap:
         clamp(var(--space-8),
@@ -1678,7 +1676,8 @@ html[data-theme="dark"] .engineering-workflow__principle-mark {
 .learning-panel {
     padding: clamp(1.5rem, 3vw, 2.5rem);
     border-top: 4px solid var(--color-accent, #f5c400);
-    background: var(--color-surface, #f5f5f5);
+    background: var(--colour-surface);
+    color: var(--colour-text);
 }
 
 .learning-panel__eyebrow {
@@ -1707,8 +1706,16 @@ html[data-theme="dark"] .engineering-workflow__principle-mark {
 .learning-grid li {
     position: relative;
     padding: 1rem 1rem 1rem 1.5rem;
-    border-top: 1px solid var(--color-border, #d4d4d4);
+    border-top: 1px solid var(--colour-border);
     line-height: 1.4;
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+
+    .toolbelt-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
 }
 
 .learning-grid li::before {

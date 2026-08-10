@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rk96884.github.io/chinagraph-2026/sitemap.xml
