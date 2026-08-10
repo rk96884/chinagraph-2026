@@ -18,8 +18,10 @@ File:
 
    --colour-background: #fafaf8;
    --colour-surface: #ffffff;
+   --colour-surface-subtle: #f5f5f2;
 
    --colour-text: #1a1a1a;
+   --colour-text-secondary: #525252;
    --colour-text-muted: #666666;
    --colour-decorative-number: #767676;
 
@@ -30,6 +32,7 @@ File:
 
    --colour-accent: #c5c9cf;
    --colour-accent-darker: #9aa1ab;
+   --colour-chinagraph: #f5c400;
 
    --colour-success: #15803d;
    --colour-warning: #d97706;
@@ -42,6 +45,8 @@ File:
    --font-heading: "Space Grotesk", sans-serif;
    --font-body: "Inter", sans-serif;
    --font-mono: "JetBrains Mono", monospace;
+   --font-chinagraph: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+   --font-family-body: var(--font-body);
 
    --font-size-xs: 0.75rem;
    --font-size-sm: 0.875rem;
@@ -70,9 +75,13 @@ File:
    --space-2: 0.5rem;
    --space-3: 0.75rem;
    --space-4: 1rem;
+   --space-5: 1.25rem;
    --space-6: 1.5rem;
+   --space-7: 1.75rem;
    --space-8: 2rem;
+   --space-10: 2.5rem;
    --space-12: 3rem;
+   --space-14: 3.5rem;
    --space-16: 4rem;
    --space-20: 5rem;
    --space-24: 6rem;
@@ -84,6 +93,7 @@ File:
    --container-width: 1200px;
    --container-padding: 1.5rem;
    --section-spacing: 6rem;
+   --header-height: 5rem;
 
    /* ==========================================================
        Border Radius
@@ -92,7 +102,25 @@ File:
    --radius-sm: 0.5rem;
    --radius-md: 0.75rem;
    --radius-lg: 1.25rem;
+   --radius-xl: 1.75rem;
    --radius-pill: 999px;
+
+   /* ==========================================================
+       Legacy component token aliases
+       ========================================================== */
+
+   --color-background: var(--colour-background);
+   --color-surface: var(--colour-surface);
+   --color-surface-subtle: var(--colour-surface-subtle);
+   --color-text: var(--colour-text);
+   --color-text-secondary: var(--colour-text-secondary);
+   --color-text-muted: var(--colour-text-muted);
+   --color-muted: var(--colour-text-muted);
+   --color-primary: var(--colour-primary);
+   --color-border: var(--colour-border);
+   --color-accent: var(--colour-chinagraph);
+   --color-accent-dark: #765f00;
+   --color-chinagraph: var(--colour-chinagraph);
 
    /* ==========================================================
        Shadows
@@ -127,14 +155,18 @@ File:
 
    --colour-background: #121212;
    --colour-surface: #1d1d1d;
+   --colour-surface-subtle: #252525;
 
    --colour-text: #f5f5f5;
+   --colour-text-secondary: #d0d0d0;
    --colour-text-muted: #b5b5b5;
 
    --colour-primary: #60a5fa;
    --colour-primary-hover: #93c5fd;
 
    --colour-border: #333333;
+
+   --color-accent-dark: var(--colour-chinagraph);
 
    --shadow-sm: 0 2px 4px rgb(0 0 0 / 0.35);
    --shadow-md: 0 8px 24px rgb(0 0 0 / 0.45);
