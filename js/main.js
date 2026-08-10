@@ -1,4 +1,5 @@
 const timelineItems = document.querySelectorAll(".timeline__item");
+const timelinePanel = document.querySelector("#timeline-panel");
 
 const timelineImage = document.querySelector("#timeline-image");
 const timelineYear = document.querySelector("#timeline-year");
@@ -17,7 +18,10 @@ function updateTimeline(selectedItem) {
 
         item.classList.toggle("is-active", isSelected);
         item.setAttribute("aria-selected", String(isSelected));
+        item.tabIndex = isSelected ? 0 : -1;
     });
+
+    timelinePanel.setAttribute("aria-labelledby", selectedItem.id);
 
     timelineYear.textContent = selectedItem.dataset.year;
     timelineTitle.textContent = selectedItem.dataset.title;
@@ -36,7 +40,14 @@ timelineItems.forEach((item, index) => {
     });
 
     item.addEventListener("keydown", (event) => {
-        const keys = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"];
+        const keys = [
+            "ArrowLeft",
+            "ArrowRight",
+            "ArrowUp",
+            "ArrowDown",
+            "Home",
+            "End"
+        ];
 
         if (!keys.includes(event.key)) {
             return;
@@ -44,12 +55,20 @@ timelineItems.forEach((item, index) => {
 
         event.preventDefault();
 
-        const moveBack =
-            event.key === "ArrowLeft" || event.key === "ArrowUp";
+        let nextIndex;
 
-        const nextIndex = moveBack
-            ? Math.max(0, index - 1)
-            : Math.min(timelineItems.length - 1, index + 1);
+        if (event.key === "Home") {
+            nextIndex = 0;
+        } else if (event.key === "End") {
+            nextIndex = timelineItems.length - 1;
+        } else {
+            const moveBack =
+                event.key === "ArrowLeft" || event.key === "ArrowUp";
+
+            nextIndex = moveBack
+                ? (index - 1 + timelineItems.length) % timelineItems.length
+                : (index + 1) % timelineItems.length;
+        }
 
         timelineItems[nextIndex].focus();
         updateTimeline(timelineItems[nextIndex]);
