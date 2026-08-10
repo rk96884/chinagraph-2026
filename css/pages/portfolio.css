@@ -113,6 +113,17 @@
     height: auto;
 }
 
+.portfolio-learning__content {
+    margin-top: var(--space-16);
+}
+
+@media (min-width: 769px) {
+    .portfolio-learning__screenshots .figure {
+        display: grid;
+        grid-template-rows: minmax(0, 1fr) auto;
+    }
+}
+
 
 /* ==========================================================
    Portfolio: Supporting Work
