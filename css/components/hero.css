@@ -14,8 +14,8 @@
 
 .hero__container {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: var(--space-10);
+    grid-template-columns: minmax(0, 1.08fr) minmax(22rem, .92fr);
+    gap: clamp(var(--space-8), 5vw, var(--space-16));
     align-items: center;
 }
 
@@ -23,7 +23,6 @@
     position: relative;
     z-index: 2;
     max-width: 42rem;
-    animation: fadeUp .8s ease forwards;
 }
 
 .hero__eyebrow {
@@ -96,43 +95,35 @@
     margin-top: 0;
 }
 
-.hero__visual {
-    position: relative;
+.hero__archive {
+    margin: 0;
+    padding: clamp(.6rem, 1vw, .85rem);
+    border: 1px solid var(--colour-border);
+    background-color: var(--colour-surface);
+    box-shadow: var(--shadow-lg);
+    transform: rotate(.35deg);
+}
+
+.hero__archive img {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+.hero__archive-caption {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: clamp(320px, 50vw, 550px);
-    animation: fadeUp 1s ease .2s forwards;
-    opacity: 0;
-}
-
-.hero__year {
-    position: absolute;
-    inset: 50% auto auto 50%;
-    transform: translate(-50%, -50%);
-    font-size: clamp(8rem, 20vw, 18rem);
-    font-weight: 900;
-    color: rgba(255, 255, 255, .04);
-    user-select: none;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.hero__image-placeholder {
-    position: relative;
-    z-index: 2;
-    width: min(420px, 90%);
-    aspect-ratio: 1;
-    border: 2px dashed rgba(255, 255, 255, .15);
-    border-radius: var(--radius-xl);
-    display: grid;
-    place-items: center;
-    background: rgba(255, 255, 255, .03);
-    backdrop-filter: blur(12px);
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-3) var(--space-1) var(--space-1);
     color: var(--colour-text-muted);
-    text-align: center;
-    padding: var(--space-6);
-    animation: float 7s ease-in-out infinite;
+    font-size: var(--font-size-xs);
+    line-height: 1.4;
+}
+
+.hero__archive-caption span:first-child {
+    color: var(--colour-text);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: .08em;
 }
 
 .hero__scroll {
@@ -145,7 +136,6 @@
     align-items: center;
     gap: .5rem;
     opacity: .7;
-    animation: bounce 3s infinite;
 }
 
 .hero__scroll span:first-child {
@@ -179,7 +169,13 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .hero__visual {
+    .hero__archive {
+        width: min(100%, 38rem);
+        margin-inline: auto;
+        transform: none;
+    }
+
+    .hero__scroll {
         display: none;
     }
 

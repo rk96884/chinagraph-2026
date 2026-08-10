@@ -14,7 +14,7 @@
     align-items: end;
     padding: clamp(2rem, 5vw, 5rem);
     border: 1px solid var(--color-border, #d8d8d2);
-    background: var(--color-surface, #f5f4ef);
+    background: var(--colour-surface-subtle, #f5f4ef);
     overflow: hidden;
 }
 

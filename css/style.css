@@ -16,7 +16,7 @@
    Design Tokens
    ========================================================================== */
 
-@import url("variables.css?v=20260810-token-aliases");
+@import url("variables.css");
 
 /* ==========================================================================
    Base
@@ -44,18 +44,9 @@
 @import url("components/featured-project.css");
 @import url("components/professional-impact.css");
 @import url("components/engineering-philosophy.css");
-@import url("components/evolve.css?v=20260810-live-status");
+@import url("components/evolve.css");
 @import url("components/website-principles.css");
 @import url("components/contact-footer.css");
-
-/* ==========================================================================
-   Pages
-   ========================================================================== */
-
-@import url("pages/cv.css");
-@import url("pages/app.css?v=20260810-mobile-pills");
-@import url("pages/portfolio.css?v=20260810-learning-layout");
-@import url("pages/engineering.css?v=20260810-dark-learning");
 
 /* ==========================================================================
    Utilities

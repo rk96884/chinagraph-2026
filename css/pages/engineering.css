@@ -1220,9 +1220,7 @@ html[data-theme="dark"] .engineering-workflow__principle-mark {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(auto-fit,
-            minmax(220px, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 
     gap:
         clamp(var(--space-8),
@@ -1710,6 +1708,14 @@ html[data-theme="dark"] .engineering-workflow__principle-mark {
     padding: 1rem 1rem 1rem 1.5rem;
     border-top: 1px solid var(--colour-border);
     line-height: 1.4;
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+
+    .toolbelt-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
 }
 
 .learning-grid li::before {

@@ -41,14 +41,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"></noscript>
 
-    <link rel="stylesheet" href="../css/style.css?v=20260810-token-aliases">
+    <link rel="stylesheet" href="../css/generated/site.min.css?v=20260810-performance">
+    <link rel="stylesheet" href="../css/generated/app.min.css?v=20260810-performance">
 
-    <script src="../js/theme.js" defer></script>
+    <script src="../js/generated/theme.min.js?v=20260810-performance" defer></script>
 </head>
 
 <body>
@@ -63,7 +63,7 @@
 
             <nav class="site-nav" aria-label="Primary">
 
-                <a class="site-logo" href="../index.html" aria-label="CHINAGRAPH home">
+                <a class="site-logo" href="../index.html">
 
                     <span class="cg-crop cg-crop--logo" aria-hidden="true">
                     </span>
@@ -75,6 +75,7 @@
                     <span class="site-logo__tagline">
                         A portfolio 25 years in the making.
                     </span>
+                    <span class="visually-hidden">Home</span>
                 </a>
                 <div class="nav-actions">
                     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
@@ -456,6 +457,11 @@
                     </article>
 
                 </div>
+
+                <aside class="cg-note app-goals__annotation">
+                    Designed for match day.<br>
+                    Not a desk.
+                </aside>
 
             </div>
 
@@ -1510,16 +1516,49 @@
 
                     </div>
 
-                    <ul class="app-checklist">
+                    <div class="app-accessibility__proof">
+                        <p class="app-accessibility__proof-title">
+                            Built-in considerations
+                        </p>
 
-                        <li>Semantic page structure</li>
-                        <li>Keyboard-accessible controls</li>
-                        <li>Visible focus indicators</li>
-                        <li>Form labels and validation feedback</li>
-                        <li>Responsive text and layouts</li>
-                        <li>Colour contrast considerations</li>
+                        <ul class="app-checklist">
+                            <li>
+                                <span class="app-checklist__number" aria-hidden="true">01</span>
+                                <span>Semantic page structure</span>
+                                <span class="app-checklist__status"><span aria-hidden="true">✓</span> Built in</span>
+                            </li>
+                            <li class="app-checklist__item--focus">
+                                <span class="app-checklist__number" aria-hidden="true">02</span>
+                                <span>Keyboard-accessible controls</span>
+                                <span class="app-checklist__status"><span aria-hidden="true">✓</span> Built in</span>
+                            </li>
+                            <li>
+                                <span class="app-checklist__number" aria-hidden="true">03</span>
+                                <span>Visible focus indicators</span>
+                                <span class="app-checklist__status"><span aria-hidden="true">✓</span> Built in</span>
+                            </li>
+                            <li>
+                                <span class="app-checklist__number" aria-hidden="true">04</span>
+                                <span>Form labels and validation feedback</span>
+                                <span class="app-checklist__status"><span aria-hidden="true">✓</span> Built in</span>
+                            </li>
+                            <li>
+                                <span class="app-checklist__number" aria-hidden="true">05</span>
+                                <span>Responsive text and layouts</span>
+                                <span class="app-checklist__status"><span aria-hidden="true">✓</span> Built in</span>
+                            </li>
+                            <li>
+                                <span class="app-checklist__number" aria-hidden="true">06</span>
+                                <span>Colour contrast considerations</span>
+                                <span class="app-checklist__status"><span aria-hidden="true">✓</span> Built in</span>
+                            </li>
+                        </ul>
 
-                    </ul>
+                        <aside class="cg-note app-accessibility__annotation">
+                            Built in.<br>
+                            Not bolted on.
+                        </aside>
+                    </div>
 
                 </div>
 
@@ -1619,6 +1658,11 @@
                             </p>
 
                         </article>
+
+                        <aside class="cg-note app-lessons__annotation">
+                            Build. Review.<br>
+                            Refine.
+                        </aside>
 
                         <article class="app-card">
 
@@ -1860,9 +1904,9 @@
         </div>
 
     </footer>
-    <script src="../js/chinagraph-authentic-marks.js" defer>
+    <script src="../js/generated/chinagraph-authentic-marks.min.js?v=20260810-performance" defer>
     </script>
-    <script src="../js/navigation.js" defer>
+    <script src="../js/generated/navigation.min.js?v=20260810-performance" defer>
     </script>
 
 </body>

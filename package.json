@@ -1,0 +1,15 @@
+{
+  "name": "chinagraph-2026",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:prepare && npm run build:css && npm run build:js",
+    "build:prepare": "node -e \"const fs=require('fs');fs.mkdirSync('css/generated',{recursive:true});fs.mkdirSync('js/generated',{recursive:true})\"",
+    "build:css": "cleancss -o css/generated/site.min.css css/style.css && node scripts/build-home-css.mjs && cleancss -o css/generated/app.min.css css/pages/app.css && cleancss -o css/generated/cv.min.css css/pages/cv.css && cleancss -o css/generated/engineering.min.css css/pages/engineering.css && cleancss -o css/generated/portfolio.min.css css/pages/portfolio.css",
+    "build:js": "terser js/theme.js -c -m -o js/generated/theme.min.js && terser js/navigation.js -c -m -o js/generated/navigation.min.js && terser js/chinagraph-authentic-marks.js -c -m -o js/generated/chinagraph-authentic-marks.min.js && terser js/main.js -c -m -o js/generated/main.min.js"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "purgecss": "^8.0.0",
+    "terser": "^5.43.1"
+  }
+}

@@ -143,12 +143,8 @@
 }
 
 .portfolio-gallery__annotation {
-    position: absolute;
-    top: -8rem;
-    left: 34rem;
-    bottom: 1rem;
-
-    margin: 0;
+    width: fit-content;
+    margin: var(--space-8) 0 0 calc(var(--space-16) * -1);
     transform: rotate(-3deg);
 }
 
@@ -220,12 +216,7 @@
     }
 
     .portfolio-gallery__annotation {
-        position: static;
-        top: 1rem;
-        left: 1rem;
-        width: fit-content;
         margin: var(--space-8) 0 0 auto;
-
         transform: rotate(-3deg);
     }
 
