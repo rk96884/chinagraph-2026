@@ -86,13 +86,15 @@ cd chinagraph-2026
 npm install
 ```
 
-Run a local static server:
+For local development, open the project in Visual Studio Code and use the **Live Server** extension. Open `index.html` (or the page you are working on), then select **Open with Live Server**.
 
-```bash
-npx serve .
+Live Server will launch the site on a local development URL, typically similar to:
+
+```text
+http://127.0.0.1:5500/
 ```
 
-Then open the localhost URL reported by `serve`.
+The Node.js dependencies are used for the project's production asset build tooling rather than for running the site locally.
 
 ### Production assets
 
