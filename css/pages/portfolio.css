@@ -509,6 +509,11 @@
     object-fit: cover;
 }
 
+.browser-frame__image--cyph1 {
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
 .side-project-card__content {
     max-width: 34rem;
 }
