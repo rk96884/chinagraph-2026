@@ -421,3 +421,87 @@
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ==========================================
+   Portfolio: Independent Project
+========================================== */
+
+.side-project-card {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-10);
+
+    margin-top: var(--space-12);
+    padding: var(--space-10);
+
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+}
+
+.side-project-card__content {
+    max-width: 48rem;
+}
+
+.side-project-card__eyebrow {
+    margin-bottom: var(--space-3);
+
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-text-muted);
+}
+
+.side-project-card__title {
+    margin-bottom: var(--space-5);
+}
+
+.side-project-card__summary {
+    max-width: 62ch;
+    margin-bottom: var(--space-6);
+
+    color: var(--color-text-secondary);
+}
+
+.side-project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+
+    margin: 0 0 var(--space-8);
+    padding: 0;
+
+    list-style: none;
+}
+
+.side-project-card__tags li {
+    padding: 0.45rem 0.7rem;
+
+    font-size: 0.85rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-text-secondary);
+}
+
+.side-project-card__annotation {
+    align-self: end;
+    margin: 0;
+    transform: rotate(-3deg);
+}
+
+@media (max-width: 768px) {
+    .side-project-card {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+
+        padding: var(--space-6);
+    }
+
+    .side-project-card__annotation {
+        justify-self: end;
+    }
+}
