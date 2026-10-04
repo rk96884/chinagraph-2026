@@ -443,6 +443,8 @@
 }
 
 .side-project-card__visual {
+    grid-column: 1 / -1;
+
     min-width: 0;
     margin: 0;
 }
@@ -517,6 +519,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    padding-top: var(--space-1);
 }
 
 .side-project-card__eyebrow {
@@ -578,8 +582,13 @@
         max-width: none;
     }
 
+    .side-project-card__visual {
+        grid-column: auto;
+    }
+
     .side-project-card__details {
         gap: var(--space-8);
+        padding-top: 0;
     }
 
     .browser-frame__address {
