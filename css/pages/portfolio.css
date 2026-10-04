@@ -511,6 +511,14 @@
     max-width: 34rem;
 }
 
+.side-project-card__details {
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .side-project-card__eyebrow {
     margin-bottom: var(--space-3);
 
@@ -533,11 +541,10 @@
 }
 
 .side-project-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
+    display: grid;
+    gap: var(--space-3);
 
-    margin: 0 0 var(--space-8);
+    margin: 0;
     padding: 0;
 
     list-style: none;
@@ -554,8 +561,8 @@
 }
 
 .side-project-card__annotation {
-    align-self: end;
-    margin: 0;
+    align-self: flex-end;
+    margin: auto 0 0;
     transform: rotate(-3deg);
 }
 
@@ -569,6 +576,10 @@
 
     .side-project-card__content {
         max-width: none;
+    }
+
+    .side-project-card__details {
+        gap: var(--space-8);
     }
 
     .browser-frame__address {
